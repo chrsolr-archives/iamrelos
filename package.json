@@ -1,0 +1,30 @@
+{
+  "name": "iamrelos",
+  "version": "1.0.0",
+  "description": "Portfolio Website",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "postinstall": "bower cache clean && bower install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamrelos/iamrelos.git"
+  },
+  "author": "Christian Soler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iamrelos/iamrelos/issues"
+  },
+  "homepage": "https://github.com/iamrelos/iamrelos#readme",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "bower": "^1.7.2",
+    "express": "^4.13.3"
+  },
+  "devDependencies": {
+    "morgan": "^1.6.1",
+    "uglify-js": "^2.6.1"
+  }
+}
