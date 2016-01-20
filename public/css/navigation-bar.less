@@ -64,11 +64,13 @@ aside.navigation-sidebar {
 .navigation-sidebar-show {
   .box-shadow(-10px 0px 20px -10px @color-box-shadow) !important;
   .transform(translate3d(50%, 0, 0)) !important;
+  .transition(~"transform 500ms ease-in-out 300ms, box-shadow 300ms ease-in-out");
 }
 
 @media @media-x-small, @media-small {
   .navigation-sidebar-show {
     .transform(translate3d(0, 0, 0)) !important;
+    .transition(~"transform 500ms ease-in-out 300ms, box-shadow 300ms ease-in-out");
   }
 }
 

@@ -71,12 +71,14 @@ aside.navigation-sidebar {
   -webkit-transform: translate3d(50%, 0, 0) !important;
   -ms-transform: translate3d(50%, 0, 0) !important;
   transform: translate3d(50%, 0, 0) !important;
+  transition: transform 500ms ease-in-out 300ms, box-shadow 300ms ease-in-out;
 }
 @media only screen and (max-width: 543px), only screen and (min-width: 544px) and (max-width: 767px) {
   .navigation-sidebar-show {
     -webkit-transform: translate3d(0, 0, 0) !important;
     -ms-transform: translate3d(0, 0, 0) !important;
     transform: translate3d(0, 0, 0) !important;
+    transition: transform 500ms ease-in-out 300ms, box-shadow 300ms ease-in-out;
   }
 }
 @media only screen and (min-width: 1200px) {
