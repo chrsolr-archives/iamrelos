@@ -4,8 +4,8 @@
   transform: rotateY(180deg);
 }
 nav.navigation-bar {
-  background-color: #fff;
-  color: #333;
+  background-color: #ffffff;
+  color: #333333;
   border-bottom: 2px solid #f1f1f1;
   min-height: 80px;
   position: fixed;
@@ -25,14 +25,14 @@ nav.navigation-bar .navigation-bar-brand {
 }
 nav.navigation-bar .navigation-bar-brand a {
   line-height: 80px;
-  color: #333;
+  color: #333333;
   font-size: 40px;
   font-weight: 200;
   transition: color 150ms linear;
 }
 nav.navigation-bar .navigation-bar-brand a:hover,
 nav.navigation-bar .navigation-bar-brand a:focus {
-  color: #aaa;
+  color: #aaaaaa;
   text-decoration: none;
 }
 nav.navigation-bar .navigation-bar-brand i {
@@ -42,7 +42,7 @@ nav.navigation-bar .navigation-bar-brand i {
 }
 nav.navigation-bar .navigation-bar-brand i:hover,
 nav.navigation-bar .navigation-bar-brand i:focus {
-  color: #aaa;
+  color: #aaaaaa;
 }
 nav.navigation-bar .navigation-bar-brand i:hover {
   cursor: pointer;
@@ -57,7 +57,7 @@ aside.navigation-sidebar {
   right: 0;
   bottom: 0;
   z-index: 1000;
-  background-color: #f1f1f1;
+  background-color: #fafafa;
   -webkit-transform: translate3d(100%, 0, 0);
   -ms-transform: translate3d(100%, 0, 0);
   transform: translate3d(100%, 0, 0);
@@ -85,7 +85,7 @@ aside.navigation-sidebar {
 body {
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
-  background-color: #fff;
-  color: #333;
+  background-color: #ffffff;
+  color: #333333;
   min-height: 100vh;
 }
