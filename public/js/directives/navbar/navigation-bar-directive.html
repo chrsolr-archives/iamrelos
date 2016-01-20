@@ -2,7 +2,7 @@
     <nav class="navigation-bar">
         <section class="navigation-bar-brand">
             <a href="/">iamrelos</a>
-            <i class="fa fa-2x fa-terminal" ng-click="vm.toggleMenu()"></i>
+            <i class="fa fa-2x fa-terminal" ng-class="vm.isSideBarOpen ? 'rotate-y-180' : ''" ng-click="vm.toggleMenu()"></i>
         </section>
     </nav>
 

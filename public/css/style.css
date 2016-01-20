@@ -1,3 +1,8 @@
+.rotate-y-180 {
+  -webkit-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
 nav.navigation-bar {
   background-color: #fff;
   color: #333;
@@ -33,7 +38,7 @@ nav.navigation-bar .navigation-bar-brand a:focus {
 nav.navigation-bar .navigation-bar-brand i {
   float: right;
   line-height: 80px;
-  transition: color 150ms linear;
+  transition: all 500ms linear;
 }
 nav.navigation-bar .navigation-bar-brand i:hover,
 nav.navigation-bar .navigation-bar-brand i:focus {
