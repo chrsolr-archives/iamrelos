@@ -6,12 +6,15 @@ module app.services {
     export interface ICommonServices {
     }
 
-    class CommonServices implements ICommonServices { 
-        constructor() {
-            
+    class CommonServices implements ICommonServices {
+
+        static $inject = ['$q'];
+
+        constructor(private $q:ng.IQService) {
+
         }
     }
 
     angular.module('app.services')
-    .factory('CommonServices', [, () => new CommonServices()]);
+        .service('CommonServices', CommonServices);
 }

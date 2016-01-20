@@ -12,7 +12,7 @@
             cfpLoadingBarProvider: ng.loadingBar.ILoadingBarProvider): void {
         
         $routeProvider.when('/', {
-            templateUrl: '/views/home.html',
+            templateUrl: '/partials/home.html',
             caseInsensitiveMatch: true,
             controller: 'HomeController',
             controllerAs: 'vm'
