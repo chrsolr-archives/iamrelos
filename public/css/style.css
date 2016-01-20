@@ -63,8 +63,7 @@ aside.navigation-sidebar {
   -webkit-transform: translate3d(100%, 0, 0);
   -ms-transform: translate3d(100%, 0, 0);
   transform: translate3d(100%, 0, 0);
-  transition: transform 500ms ease-in-out;
-  transition: box-shadow 500ms linear;
+  transition: all 500ms ease-in-out;
 }
 .navigation-sidebar-show {
   -webkit-box-shadow: -10px 0px 20px -10px #777777 !important;
