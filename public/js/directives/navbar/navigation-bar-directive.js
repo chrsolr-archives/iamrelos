@@ -14,6 +14,9 @@ var app;
                     _this.isSideBarOpen = data;
                 });
             }
+            NavigationBarDirective.prototype.toggleMenu = function () {
+                this.NavigationServices.toggleSideBar();
+            };
             NavigationBarDirective.$inject = ['$scope', 'NavigationServices'];
             return NavigationBarDirective;
         })();

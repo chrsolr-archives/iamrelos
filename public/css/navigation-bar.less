@@ -6,6 +6,9 @@ nav.navigation-bar {
   border-bottom: 2px solid @color-border-base-navbar;
   min-height: @height-navbar;
   position: fixed;
+  overflow: hidden;
+  padding: 0 @space-level-8;
+  z-index: 1001;
   top: 0;
   left: 0;
   right: 0;
@@ -20,12 +23,55 @@ nav.navigation-bar {
       color: @color-font-base-navbar;
       font-size: @font-size-brand;
       font-weight: @font-light-weight;
-      .transition(color 250ms linear);
+      .transition(color 150ms linear);
 
       &:hover, &:focus {
         color: @color-font-hover-navbar;
         text-decoration: none;
       }
     }
+
+    i {
+      float: right;
+      line-height: @height-navbar;
+      .transition(color 150ms linear);
+
+      &:hover, &:focus {
+        color: @color-font-hover-navbar;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+aside.navigation-sidebar {
+  .box-sizing(border-box);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  background-color: @color-bg-base-sidebar;
+  .transform(translate3d(100%, 0, 0));
+  .transition(transform 500ms ease-in-out);
+}
+
+.navigation-sidebar-show {
+  .transform(translate3d(50%, 0, 0)) !important;
+}
+
+@media @media-x-small, @media-small {
+  .navigation-sidebar-show {
+    .transform(translate3d(0, 0, 0)) !important;
+  }
+}
+
+@media @media-x-large {
+  .navigation-sidebar-show {
+    .transform(translate3d(75%, 0, 0)) !important;
   }
 }

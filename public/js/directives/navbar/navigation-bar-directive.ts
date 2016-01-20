@@ -19,6 +19,10 @@ module app.directives {
                 _this.isSideBarOpen = data;
             });
         }
+
+        toggleMenu(): void {
+            this.NavigationServices.toggleSideBar();
+        }
     }
 
     angular.module('app.directives').directive('navigationBar', (): ng.IDirective => {

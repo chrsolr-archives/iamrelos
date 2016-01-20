@@ -4,6 +4,9 @@ nav.navigation-bar {
   border-bottom: 2px solid #f1f1f1;
   min-height: 80px;
   position: fixed;
+  overflow: hidden;
+  padding: 0 40px;
+  z-index: 1001;
   top: 0;
   left: 0;
   right: 0;
@@ -19,13 +22,60 @@ nav.navigation-bar .navigation-bar-brand a {
   line-height: 80px;
   color: #333;
   font-size: 40px;
-  font-weight: 100;
-  transition: color 250ms linear;
+  font-weight: 200;
+  transition: color 150ms linear;
 }
 nav.navigation-bar .navigation-bar-brand a:hover,
 nav.navigation-bar .navigation-bar-brand a:focus {
   color: #aaa;
   text-decoration: none;
+}
+nav.navigation-bar .navigation-bar-brand i {
+  float: right;
+  line-height: 80px;
+  transition: color 150ms linear;
+}
+nav.navigation-bar .navigation-bar-brand i:hover,
+nav.navigation-bar .navigation-bar-brand i:focus {
+  color: #aaa;
+}
+nav.navigation-bar .navigation-bar-brand i:hover {
+  cursor: pointer;
+}
+aside.navigation-sidebar {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  background-color: #f1f1f1;
+  -webkit-transform: translate3d(100%, 0, 0);
+  -ms-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+  transition: transform 500ms ease-in-out;
+}
+.navigation-sidebar-show {
+  -webkit-transform: translate3d(50%, 0, 0) !important;
+  -ms-transform: translate3d(50%, 0, 0) !important;
+  transform: translate3d(50%, 0, 0) !important;
+}
+@media only screen and (max-width: 543px), only screen and (min-width: 544px) and (max-width: 767px) {
+  .navigation-sidebar-show {
+    -webkit-transform: translate3d(0, 0, 0) !important;
+    -ms-transform: translate3d(0, 0, 0) !important;
+    transform: translate3d(0, 0, 0) !important;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .navigation-sidebar-show {
+    -webkit-transform: translate3d(75%, 0, 0) !important;
+    -ms-transform: translate3d(75%, 0, 0) !important;
+    transform: translate3d(75%, 0, 0) !important;
+  }
 }
 body {
   font-family: 'Raleway', sans-serif;
