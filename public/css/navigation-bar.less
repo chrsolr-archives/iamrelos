@@ -58,25 +58,25 @@ aside.navigation-sidebar {
   background-color: @color-bg-base-sidebar;
   .box-shadow(none);
   .transform(translate3d(100%, 0, 0));
-  .transition(~"transform 500ms ease-in-out, box-shadow 300ms ease-in-out 500ms");
+  .transition(~"transform 500ms ease-in-out 300ms, box-shadow 300ms ease-in-out 500ms");
 }
 
 .navigation-sidebar-show {
   .box-shadow(-10px 0px 20px -10px @color-box-shadow) !important;
   .transform(translate3d(50%, 0, 0)) !important;
-  .transition(~"transform 500ms ease-in-out 300ms, box-shadow 300ms ease-in-out") !important;
+  .transition(~"transform 500ms ease-in-out, box-shadow 300ms ease-in-out 500ms") !important;
 }
 
 @media @media-x-small, @media-small {
   .navigation-sidebar-show {
     .transform(translate3d(0, 0, 0)) !important;
-    .transition(~"transform 500ms ease-in-out 300ms, box-shadow 300ms ease-in-out") !important;
+    .transition(~"transform 500ms ease-in-out, box-shadow 300ms ease-in-out 500ms") !important;
   }
 }
 
 @media @media-x-large {
   .navigation-sidebar-show {
     .transform(translate3d(75%, 0, 0)) !important;
-    .transition(~"transform 500ms ease-in-out 300ms, box-shadow 300ms ease-in-out") !important;
+    .transition(~"transform 500ms ease-in-out, box-shadow 300ms ease-in-out 500ms") !important;
   }
 }
