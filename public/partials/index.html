@@ -9,7 +9,8 @@
         <meta name="description" content="Christian 'iamrelos' Soler Personal Website">
     
         <title>iamrelos</title>
-    
+
+        <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" href="/libs/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="/libs/animate.css/animate.min.css"/>
@@ -28,7 +29,7 @@
         </style>
     </head>
     <body>
-        <nav></nav>
+        <navigation-bar></navigation-bar>
         
         <div ng-view autoscroll></div>
         
@@ -40,7 +41,9 @@
         <script src='/js/core/application.js'></script>
         <script src='/js/core/application-config.js'></script>
         <script src='/js/core/application-run.js'></script>
+        <script src='/js/services/nagivation-services.js'></script>
         <script src='/js/services/common-services.js'></script>
+        <script src='/js/directives/navbar/navigation-bar-directive.js'></script>
         <script src='/js/controllers/home-controller.js'></script>
     </body>
 </html>

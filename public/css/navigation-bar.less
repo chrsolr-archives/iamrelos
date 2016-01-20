@@ -1,0 +1,28 @@
+@import 'variables';
+
+nav.navigation-bar {
+  background-color: @color-bg-navbar;
+  color: @color-font-base-navbar;
+  border-bottom: 2px solid @color-border-base-navbar;
+  min-height: @height-navbar;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  .box-sizing(border-box);
+
+  .navigation-bar-brand {
+    display: block;
+    text-align: center;
+    line-height: @height-navbar;
+    color: @color-font-base-navbar;
+    font-size: @font-size-brand;
+    font-weight: @font-light-weight;
+    .transition(color 250ms linear);
+
+    &:hover, &:focus {
+      color: @color-font-hover-navbar;
+      text-decoration: none;
+    }
+  }
+}
