@@ -313,8 +313,9 @@
 
 // Transitions
 
-.transition(@args:200ms) {
-  transition: @args;
+.transition(@args...) {
+  @props: ~`"@{arguments}".replace(/[\[\]]/g, '')`;
+  transition: @props;
 }
 .transition-delay(@delay:0) {
   transition-delay: @delay;
