@@ -58,6 +58,8 @@ aside.navigation-sidebar {
   bottom: 0;
   z-index: 1000;
   background-color: #fafafa;
+  -webkit-box-shadow: -10px 0px 20px -10px #777777;
+  box-shadow: -10px 0px 20px -10px #777777;
   -webkit-transform: translate3d(100%, 0, 0);
   -ms-transform: translate3d(100%, 0, 0);
   transform: translate3d(100%, 0, 0);
