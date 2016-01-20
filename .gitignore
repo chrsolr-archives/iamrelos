@@ -30,3 +30,5 @@ public/libs/*
 npm-debug.log
 .idea
 typings
+public/css/*.css
+!public/css/style.css
