@@ -55,7 +55,6 @@ nav.navigation-bar {
   right: 0;
   bottom: 0;
   z-index: 1000;
-  width: 50%;
   overflow: hidden;
   background-color: @color-bg-base-sidebar;
   .box-shadow(none);
@@ -71,7 +70,6 @@ nav.navigation-bar {
 
 @media @media-x-small, @media-small {
   .navigation-sidebar-container.open {
-    width: 100%;
     .transform(translate3d(0, 0, 0));
     .transition(~"transform 500ms ease-in-out, box-shadow 300ms ease-in-out 500ms, width 500ms");
   }
@@ -79,7 +77,6 @@ nav.navigation-bar {
 
 @media @media-x-large {
   .navigation-sidebar-container.open {
-    width: 25%;
     .transform(translate3d(0, 0, 0));
     .transition(~"transform 500ms ease-in-out, box-shadow 300ms ease-in-out 500ms, width 0ms");
   }

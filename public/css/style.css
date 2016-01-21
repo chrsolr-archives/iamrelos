@@ -57,7 +57,6 @@ nav.navigation-bar .navigation-bar-brand i:hover {
   right: 0;
   bottom: 0;
   z-index: 1000;
-  width: 50%;
   overflow: hidden;
   background-color: #ffffff;
   -webkit-box-shadow: none;
@@ -77,7 +76,6 @@ nav.navigation-bar .navigation-bar-brand i:hover {
 }
 @media only screen and (max-width: 543px), only screen and (min-width: 544px) and (max-width: 767px) {
   .navigation-sidebar-container.open {
-    width: 100%;
     -webkit-transform: translate3d(0, 0, 0);
     -ms-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
@@ -86,7 +84,6 @@ nav.navigation-bar .navigation-bar-brand i:hover {
 }
 @media only screen and (min-width: 1200px) {
   .navigation-sidebar-container.open {
-    width: 25%;
     -webkit-transform: translate3d(0, 0, 0);
     -ms-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
