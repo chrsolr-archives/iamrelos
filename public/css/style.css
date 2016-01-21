@@ -76,8 +76,11 @@ nav.navigation-bar .navigation-bar-brand i:hover {
   display: block;
 }
 .navigation-sidebar-container .content ul {
-  padding: 3 0;
+  padding: 5px 0 0 0;
   list-style: none;
+}
+.navigation-sidebar-container .content ul li {
+  padding-bottom: 10px;
 }
 .navigation-sidebar-container.open {
   width: 25%;
