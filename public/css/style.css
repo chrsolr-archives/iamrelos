@@ -70,20 +70,26 @@ nav.navigation-bar .navigation-bar-brand i:hover {
 .navigation-sidebar-container.open {
   -webkit-box-shadow: -10px 0px 10px -10px #777777;
   box-shadow: -10px 0px 10px -10px #777777;
-  -webkit-transform: translate3d(0%, 0, 0);
-  -ms-transform: translate3d(0%, 0, 0);
-  transform: translate3d(0%, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
   transition: transform 500ms ease-in-out, box-shadow 300ms ease-in-out 500ms, width 0ms;
 }
 @media only screen and (max-width: 543px), only screen and (min-width: 544px) and (max-width: 767px) {
   .navigation-sidebar-container.open {
     width: 100%;
+    -webkit-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
     transition: transform 500ms ease-in-out, box-shadow 300ms ease-in-out 500ms, width 0ms;
   }
 }
 @media only screen and (min-width: 1200px) {
   .navigation-sidebar-container.open {
     width: 25%;
+    -webkit-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
     transition: transform 500ms ease-in-out, box-shadow 300ms ease-in-out 500ms, width 0ms;
   }
 }
