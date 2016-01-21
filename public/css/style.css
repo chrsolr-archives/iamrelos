@@ -66,12 +66,16 @@ nav.navigation-bar .navigation-bar-brand i:hover {
 }
 .navigation-sidebar-container .content {
   opacity: 0;
+  text-align: center;
   transition: opacity 300ms linear;
 }
 .navigation-sidebar-container .content .navigation-sidebar-brand {
   font-size: 20px;
   font-weight: 200;
   padding-bottom: 3px;
+}
+.navigation-sidebar-container .content ul {
+  padding: 0;
 }
 .navigation-sidebar-container.open {
   width: 25%;
