@@ -74,7 +74,8 @@ nav.navigation-bar .navigation-bar-brand i:hover {
 .navigation-sidebar-container .content .navigation-sidebar-brand {
   font-size: 40px;
   font-weight: 200;
-  border-bottom: 2px solid #333;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #f1f1f1;
 }
 .navigation-sidebar-container.open {
   -webkit-box-shadow: -10px 0px 10px -10px #777777;
