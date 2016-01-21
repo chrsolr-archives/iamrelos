@@ -76,7 +76,8 @@ nav.navigation-bar .navigation-bar-brand i:hover {
   display: block;
 }
 .navigation-sidebar-container .content .divider::before {
-  content: '&there4;';
+  font-size: 40px;
+  content: '\u2234';
 }
 .navigation-sidebar-container .content ul {
   padding: 5px 0 0 0;
