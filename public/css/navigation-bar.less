@@ -66,6 +66,8 @@ nav.navigation-bar {
     bottom: 0;
     background-color: @color-bg-base-sidebar-left;
     width: 50%;
+    .transform(translate3d(50%, 0, 0));
+    .transition(transform 500ms ease-in-out 500ms);
   }
   
   .right {
@@ -80,6 +82,10 @@ nav.navigation-bar {
 
 .navigation-sidebar-container.open {
   .transform(translate3d(0, 0, 0));
+  
+  .left {
+    .transform(translate3d(0, 0, 0));
+  }
 }
 
 //

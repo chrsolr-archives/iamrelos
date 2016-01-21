@@ -70,6 +70,10 @@ nav.navigation-bar .navigation-bar-brand i:hover {
   bottom: 0;
   background-color: #a1a1a1;
   width: 50%;
+  -webkit-transform: translate3d(50%, 0, 0);
+  -ms-transform: translate3d(50%, 0, 0);
+  transform: translate3d(50%, 0, 0);
+  transition: transform 500ms ease-in-out 500ms;
 }
 .navigation-sidebar-container .right {
   position: absolute;
@@ -80,6 +84,11 @@ nav.navigation-bar .navigation-bar-brand i:hover {
   width: 50%;
 }
 .navigation-sidebar-container.open {
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.navigation-sidebar-container.open .left {
   -webkit-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
