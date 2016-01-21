@@ -76,13 +76,13 @@ nav.navigation-bar .navigation-bar-brand i:hover {
   transition: transform 500ms ease-in-out, box-shadow 300ms ease-in-out 500ms, width 0ms;
 }
 @media only screen and (max-width: 543px), only screen and (min-width: 544px) and (max-width: 767px) {
-  .navigation-sidebar.open {
+  .navigation-sidebar-container.open {
     width: 100%;
     transition: width 0ms;
   }
 }
 @media only screen and (min-width: 1200px) {
-  .navigation-sidebar.open {
+  .navigation-sidebar-container.open {
     width: 25%;
     transition: width 0ms;
   }
