@@ -135,4 +135,5 @@ body {
   background-color: #ffffff;
   color: #333333;
   min-height: 100vh;
+  text-transform: lowercase;
 }
