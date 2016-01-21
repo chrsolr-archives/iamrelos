@@ -56,7 +56,6 @@ nav.navigation-bar .navigation-bar-brand i:hover {
   top: 0;
   right: 0;
   bottom: 0;
-  min-width: 50%;
   z-index: 1000;
   overflow: hidden;
   background-color: #ffffff;
@@ -78,6 +77,11 @@ nav.navigation-bar .navigation-bar-brand i:hover {
 @media only screen and (max-width: 543px), only screen and (min-width: 544px) and (max-width: 767px) {
   .navigation-sidebar-container.open {
     min-width: 100%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 992px) and (max-width: 1199px) {
+  .navigation-sidebar-container.open {
+    min-width: 50%;
   }
 }
 @media only screen and (min-width: 1200px) {

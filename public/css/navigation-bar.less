@@ -54,7 +54,6 @@ nav.navigation-bar {
   top: 0;
   right: 0;
   bottom: 0;
-  min-width: 50%;
   z-index: 1000;
   overflow: hidden;
   background-color: @color-bg-base-sidebar;
@@ -72,6 +71,12 @@ nav.navigation-bar {
 @media @media-x-small, @media-small {
   .navigation-sidebar-container.open {
     min-width: 100%;
+  }
+}
+
+@media @media-medium, @media-large {
+  .navigation-sidebar-container.open {
+    min-width: 50%;
   }
 }
 
