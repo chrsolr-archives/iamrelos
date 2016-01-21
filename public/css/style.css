@@ -75,6 +75,9 @@ nav.navigation-bar .navigation-bar-brand i:hover {
   padding-bottom: 3px;
   display: block;
 }
+.navigation-sidebar-container .content .divider::before {
+  content: '&there4;';
+}
 .navigation-sidebar-container .content ul {
   padding: 5px 0 0 0;
   list-style: none;
