@@ -118,12 +118,13 @@ nav.navigation-bar .navigation-bar-brand i:hover {
 #home-content-wrapper .header-wrapper .subtitle {
   display: block;
   text-align: center;
-  font-weight: 200;
+  font-weight: 100;
 }
 #home-content-wrapper .header-wrapper .title {
-  font-size: 22vw;
+  font-size: 18vw;
 }
 #home-content-wrapper .header-wrapper .subtitle {
+  position: relative;
   font-size: 5vw;
   top: -8vw;
 }
