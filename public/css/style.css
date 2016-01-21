@@ -55,17 +55,14 @@ nav.navigation-bar .navigation-bar-brand i:hover {
   position: fixed;
   top: 0;
   right: 0;
-  left: 0;
   bottom: 0;
   z-index: 1000;
   overflow: hidden;
   background-color: #ffffff;
+  width: 0;
   -webkit-box-shadow: none;
   box-shadow: none;
-  -webkit-transform: translate3d(100%, 0, 0);
-  -ms-transform: translate3d(100%, 0, 0);
-  transform: translate3d(100%, 0, 0);
-  transition: transform 500ms ease-in-out 300ms, box-shadow 300ms ease-in-out;
+  transition: width 500ms ease-in-out 300ms, box-shadow 300ms ease-in-out;
 }
 .navigation-sidebar-container .content {
   opacity: 0;
@@ -75,14 +72,11 @@ nav.navigation-bar .navigation-bar-brand i:hover {
   font-size: 20px;
   font-weight: 200;
   padding-bottom: 3px;
-  border-bottom: 1px solid #f1f1f1;
 }
 .navigation-sidebar-container.open {
+  width: 75%;
   -webkit-box-shadow: -10px 0px 10px -10px #777777;
   box-shadow: -10px 0px 10px -10px #777777;
-  -webkit-transform: translate3d(75%, 0, 0);
-  -ms-transform: translate3d(75%, 0, 0);
-  transform: translate3d(75%, 0, 0);
   transition: transform 500ms ease-in-out, box-shadow 300ms ease-in-out 500ms;
 }
 .navigation-sidebar-container.open .content {
@@ -91,16 +85,12 @@ nav.navigation-bar .navigation-bar-brand i:hover {
 }
 @media only screen and (max-width: 543px), only screen and (min-width: 544px) and (max-width: 767px) {
   .navigation-sidebar-container.open {
-    -webkit-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    width: 100%;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 992px) and (max-width: 1199px) {
   .navigation-sidebar-container.open {
-    -webkit-transform: translate3d(50%, 0, 0);
-    -ms-transform: translate3d(50%, 0, 0);
-    transform: translate3d(50%, 0, 0);
+    width: 25%;
   }
 }
 body {
