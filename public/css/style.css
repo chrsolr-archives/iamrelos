@@ -71,6 +71,10 @@ nav.navigation-bar .navigation-bar-brand i:hover {
   opacity: 0;
   transition: opacity 300ms linear;
 }
+.navigation-sidebar-container .content .navigation-sidebar-brand {
+  font-size: 40px;
+  font-weight: 200;
+}
 .navigation-sidebar-container.open {
   -webkit-box-shadow: -10px 0px 10px -10px #777777;
   box-shadow: -10px 0px 10px -10px #777777;
@@ -100,7 +104,7 @@ nav.navigation-bar .navigation-bar-brand i:hover {
 body {
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
-  background-color: #ff0000;
+  background-color: #aaaaaa;
   color: #333333;
   min-height: 100vh;
 }
