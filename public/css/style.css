@@ -38,7 +38,7 @@ nav.navigation-bar .navigation-bar-brand a:focus {
 nav.navigation-bar .navigation-bar-brand i {
   float: right;
   line-height: 80px;
-  transition: all 500ms linear;
+  transition: all 500ms ease;
 }
 nav.navigation-bar .navigation-bar-brand i:hover,
 nav.navigation-bar .navigation-bar-brand i:focus {
