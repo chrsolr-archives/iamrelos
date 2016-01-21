@@ -111,6 +111,22 @@ nav.navigation-bar .navigation-bar-brand i:hover {
     width: 55%;
   }
 }
+#home-content-wrapper {
+  padding-top: 80px;
+}
+#home-content-wrapper .header-wrapper .title,
+#home-content-wrapper .header-wrapper .subtitle {
+  display: block;
+  text-align: center;
+  font-weight: 200;
+}
+#home-content-wrapper .header-wrapper .title {
+  font-size: 22vw;
+}
+#home-content-wrapper .header-wrapper .subtitle {
+  font-size: 5vw;
+  top: -8vw;
+}
 body {
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
