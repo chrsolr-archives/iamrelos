@@ -49,6 +49,7 @@ nav.navigation-bar {
 
 .navigation-sidebar-container {
   .box-sizing(border-box);
+  padding-top: @height-navbar + @space-level-4;
   position: fixed;
   top: 0;
   right: 0;
@@ -63,7 +64,6 @@ nav.navigation-bar {
 }
 
 .navigation-sidebar-container.open {
-  width: 25%;
   .box-shadow(-10px 0px 10px -10px @color-box-shadow);
   .transform(translate3d(25%, 0, 0));
   .transition(~"transform 500ms ease-in-out, box-shadow 300ms ease-in-out 500ms");
