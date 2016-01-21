@@ -59,7 +59,7 @@ nav.navigation-bar {
   background-color: @color-bg-base-sidebar;
   width: 0;
   .box-shadow(none);
-  .transition(~"width 500ms ease-in-out 300ms, box-shadow 300ms ease-in-out");
+  .transition(~"width 500ms ease 300ms, box-shadow 300ms ease");
   
   .content {
     opacity: 0;
@@ -76,7 +76,7 @@ nav.navigation-bar {
 .navigation-sidebar-container.open {
   width: 75%;
   .box-shadow(-10px 0px 10px -10px @color-box-shadow);
-  .transition(~"transform 500ms ease-in-out, box-shadow 300ms ease-in-out 500ms");
+  .transition(~"transform 500ms ease, box-shadow 300ms ease 500ms");
   
   .content {
     opacity: 1;
