@@ -60,25 +60,23 @@ nav.navigation-bar {
   background-color: @color-bg-base-sidebar;
   .box-shadow(none);
   .transform(translate3d(100%, 0, 0));
-  .transition(~"transform 500ms ease-in-out 300ms, box-shadow 300ms ease-in-out, width 500ms");
+  .transition(~"transform 500ms ease-in-out 300ms, box-shadow 300ms ease-in-out");
 }
 
 .navigation-sidebar-container.open {
   .box-shadow(-10px 0px 10px -10px @color-box-shadow);
   .transform(translate3d(0, 0, 0));
-  .transition(~"transform 500ms ease-in-out, box-shadow 300ms ease-in-out 500ms, width 500ms");
+  .transition(~"transform 500ms ease-in-out, box-shadow 300ms ease-in-out 500ms");
 }
 
 @media @media-x-small, @media-small {
   .navigation-sidebar-container.open {
-    .transform(translate3d(0, 0, 0));
-    .transition(~"transform 500ms ease-in-out, box-shadow 300ms ease-in-out 500ms, width 500ms");
+    min-width: 100%;
   }
 }
 
 @media @media-x-large {
   .navigation-sidebar-container.open {
-    .transform(translate3d(0, 0, 0));
-    .transition(~"transform 500ms ease-in-out, box-shadow 300ms ease-in-out 500ms, width 0ms");
+    min-width: 25%;
   }
 }
