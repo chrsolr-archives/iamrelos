@@ -64,10 +64,18 @@ nav.navigation-bar .navigation-bar-brand i:hover {
   transition: transform 500ms ease-in-out;
 }
 .navigation-sidebar-container .left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
   background-color: #a1a1a1;
   width: 50%;
 }
 .navigation-sidebar-container .right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
   background-color: #f1f1f1;
   width: 50%;
 }
