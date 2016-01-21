@@ -47,7 +47,7 @@ nav.navigation-bar .navigation-bar-brand i:focus {
 nav.navigation-bar .navigation-bar-brand i:hover {
   cursor: pointer;
 }
-.navigation-sidebar {
+.navigation-container-sidebar {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -57,21 +57,24 @@ nav.navigation-bar .navigation-bar-brand i:hover {
   left: 0;
   bottom: 0;
   z-index: 1000;
-  background-color: #aaaaaa;
-  -webkit-box-shadow: none;
-  box-shadow: none;
+  background-color: #ffffff;
   -webkit-transform: translate3d(100%, 0, 0);
   -ms-transform: translate3d(100%, 0, 0);
   transform: translate3d(100%, 0, 0);
-  transition: transform 500ms ease-in-out 300ms, box-shadow 300ms ease-in-out;
+  transition: transform 500ms ease-in-out;
 }
-.navigation-sidebar.open {
-  -webkit-box-shadow: -10px 0px 10px -10px #777777;
-  box-shadow: -10px 0px 10px -10px #777777;
+.navigation-container-sidebar .left {
+  background-color: #a1a1a1;
+  width: 50%;
+}
+.navigation-container-sidebar .right {
+  background-color: #f1f1f1;
+  width: 50%;
+}
+.navigation-sidebar-container.open {
   -webkit-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-  transition: transform 500ms ease-in-out, box-shadow 300ms ease-in-out 500ms;
 }
 body {
   font-family: 'Raleway', sans-serif;
