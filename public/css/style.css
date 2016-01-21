@@ -71,9 +71,9 @@ nav.navigation-bar .navigation-bar-brand i:hover {
   width: 25%;
   -webkit-box-shadow: -10px 0px 10px -10px #777777;
   box-shadow: -10px 0px 10px -10px #777777;
-  -webkit-transform: translate3d(75%, 0, 0);
-  -ms-transform: translate3d(75%, 0, 0);
-  transform: translate3d(75%, 0, 0);
+  -webkit-transform: translate3d(25%, 0, 0);
+  -ms-transform: translate3d(25%, 0, 0);
+  transform: translate3d(25%, 0, 0);
   transition: transform 500ms ease-in-out, box-shadow 300ms ease-in-out 500ms;
 }
 body {
