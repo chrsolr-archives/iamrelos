@@ -69,7 +69,7 @@ nav.navigation-bar .navigation-bar-brand i:hover {
 }
 .navigation-sidebar-container .content {
   opacity: 0;
-  transition: opacity 300ms linear 800ms;
+  transition: opacity 300ms linear;
 }
 .navigation-sidebar-container.open {
   -webkit-box-shadow: -10px 0px 10px -10px #777777;
@@ -81,6 +81,7 @@ nav.navigation-bar .navigation-bar-brand i:hover {
 }
 .navigation-sidebar-container.open .content {
   opacity: 1;
+  transition: opacity 300ms linear 500ms;
 }
 @media only screen and (max-width: 543px), only screen and (min-width: 544px) and (max-width: 767px) {
   .navigation-sidebar-container.open {
