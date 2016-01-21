@@ -88,6 +88,9 @@ nav.navigation-bar .navigation-bar-brand i:hover {
 .navigation-sidebar-container .content ul li a {
   font-size: 20px;
 }
+.navigation-sidebar-container .content ul li a:hover {
+  text-decoration: none;
+}
 .navigation-sidebar-container.open {
   width: 25%;
   -webkit-box-shadow: -10px 0px 10px -10px #777777;
