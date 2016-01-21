@@ -119,6 +119,7 @@ nav.navigation-bar .navigation-bar-brand i:hover {
   display: block;
   text-align: center;
   font-weight: 100;
+  color: #aaaaaa;
 }
 #home-content-wrapper .header-wrapper .title {
   font-size: 18vw;
@@ -126,7 +127,7 @@ nav.navigation-bar .navigation-bar-brand i:hover {
 #home-content-wrapper .header-wrapper .subtitle {
   position: relative;
   font-size: 5vw;
-  top: -8vw;
+  top: -6vw;
 }
 body {
   font-family: 'Raleway', sans-serif;
