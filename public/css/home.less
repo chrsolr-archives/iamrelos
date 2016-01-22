@@ -1,18 +1,18 @@
 @import 'variables';
 
 #home-content-wrapper {
+  padding-top: @height-navbar;
 
   .header-wrapper {
-    min-height: 100vh;
     position: relative;
 
     div:first-child {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      .transform(translate3d(0, -50%, 0));
+      //position: absolute;
+      //top: 50%;
+      //left: 0;
+      //right: 0;
+      //bottom: 0;
+      //.transform(translate3d(0, -50%, 0));
 
       .title, .subtitle {
         display: block;
@@ -35,8 +35,6 @@
 
   .profile-wrapper {
     img:first-child {
-      position: relative;
-      top: -120px;
       height: 200px;
       width: 200px;
       margin-bottom: 1rem;

@@ -119,19 +119,11 @@ nav.navigation-bar .navigation-bar-brand i:hover {
     width: 55%;
   }
 }
-#home-content-wrapper .header-wrapper {
-  min-height: 100vh;
-  position: relative;
+#home-content-wrapper {
+  padding-top: 80px;
 }
-#home-content-wrapper .header-wrapper div:first-child {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  -webkit-transform: translate3d(0, -50%, 0);
-  -ms-transform: translate3d(0, -50%, 0);
-  transform: translate3d(0, -50%, 0);
+#home-content-wrapper .header-wrapper {
+  position: relative;
 }
 #home-content-wrapper .header-wrapper div:first-child .title,
 #home-content-wrapper .header-wrapper div:first-child .subtitle {
@@ -149,8 +141,6 @@ nav.navigation-bar .navigation-bar-brand i:hover {
   top: -6vw;
 }
 #home-content-wrapper .profile-wrapper img:first-child {
-  position: relative;
-  top: -120px;
   height: 200px;
   width: 200px;
   margin-bottom: 1rem;
