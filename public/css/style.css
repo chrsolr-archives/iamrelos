@@ -147,7 +147,7 @@ nav.navigation-bar .navigation-bar-brand i:hover {
 }
 #home-content-wrapper .header-wrapper .subtitle {
   position: relative;
-  font-size: 2.7vw;
+  font-size: 1.7rem;
   top: -4vw;
 }
 #home-content-wrapper .profile-wrapper img:first-child {
@@ -160,7 +160,7 @@ nav.navigation-bar .navigation-bar-brand i:hover {
     font-size: 3rem;
   }
   #home-content-wrapper .header-wrapper .subtitle {
-    font-size: 4.7vw;
+    font-size: 1rem;
   }
 }
 @media only screen and (min-width: 544px) and (max-width: 767px) {
@@ -168,7 +168,7 @@ nav.navigation-bar .navigation-bar-brand i:hover {
     font-size: 5rem;
   }
   #home-content-wrapper .header-wrapper .subtitle {
-    font-size: 4.7vw;
+    font-size: 1.2rem;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
@@ -176,7 +176,7 @@ nav.navigation-bar .navigation-bar-brand i:hover {
     font-size: 7rem;
   }
   #home-content-wrapper .header-wrapper .subtitle {
-    font-size: 4vw;
+    font-size: 1.5rem;
   }
 }
 html {
