@@ -25,7 +25,7 @@
     }
 
     .title {
-      font-size: 15vw;
+      font-size: 10rem;
     }
 
     .subtitle {
@@ -43,10 +43,10 @@
     }
   }
 
-  @media @media-x-small, @media-small {
+  @media @media-x-small {
     .header-wrapper {
       .title {
-
+        font-size: 3rem;
       }
 
       .subtitle {
@@ -55,10 +55,22 @@
     }
   }
 
-  @media @media-medium {
+  @media @media-small {
     .header-wrapper {
       .title {
+        font-size: 5rem;
+      }
 
+      .subtitle {
+        font-size: 4.7vw;
+      }
+    }
+  }
+
+  @media @media-large, @media-medium {
+    .header-wrapper {
+      .title {
+        font-size: 7rem;
       }
 
       .subtitle {

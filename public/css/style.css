@@ -143,7 +143,7 @@ nav.navigation-bar .navigation-bar-brand i:hover {
   opacity: 0;
 }
 #home-content-wrapper .header-wrapper .title {
-  font-size: 15vw;
+  font-size: 10rem;
 }
 #home-content-wrapper .header-wrapper .subtitle {
   position: relative;
@@ -155,12 +155,26 @@ nav.navigation-bar .navigation-bar-brand i:hover {
   width: 200px;
   margin-bottom: 1rem;
 }
-@media only screen and (max-width: 543px), only screen and (min-width: 544px) and (max-width: 767px) {
+@media only screen and (max-width: 543px) {
+  #home-content-wrapper .header-wrapper .title {
+    font-size: 3rem;
+  }
   #home-content-wrapper .header-wrapper .subtitle {
     font-size: 4.7vw;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width: 544px) and (max-width: 767px) {
+  #home-content-wrapper .header-wrapper .title {
+    font-size: 5rem;
+  }
+  #home-content-wrapper .header-wrapper .subtitle {
+    font-size: 4.7vw;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
+  #home-content-wrapper .header-wrapper .title {
+    font-size: 7rem;
+  }
   #home-content-wrapper .header-wrapper .subtitle {
     font-size: 4vw;
   }
