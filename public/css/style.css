@@ -119,11 +119,20 @@ nav.navigation-bar .navigation-bar-brand i:hover {
     width: 55%;
   }
 }
-#home-content-wrapper {
-  padding-top: 80px;
-}
 #home-content-wrapper .header-wrapper {
+  min-height: 100vh;
   position: relative;
+  overflow: hidden;
+}
+#home-content-wrapper .header-wrapper div:first-child {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transform: translate3d(0, -50%, 0);
+  -ms-transform: translate3d(0, -50%, 0);
+  transform: translate3d(0, -50%, 0);
 }
 #home-content-wrapper .header-wrapper div:first-child .title,
 #home-content-wrapper .header-wrapper div:first-child .subtitle {
@@ -131,14 +140,15 @@ nav.navigation-bar .navigation-bar-brand i:hover {
   text-align: center;
   font-weight: 100;
   color: #777;
+  opacity: 0;
 }
 #home-content-wrapper .header-wrapper .title {
-  font-size: 18vw;
+  font-size: 15vw;
 }
 #home-content-wrapper .header-wrapper .subtitle {
   position: relative;
-  font-size: 5vw;
-  top: -6vw;
+  font-size: 2.7vw;
+  top: -4vw;
 }
 #home-content-wrapper .profile-wrapper img:first-child {
   height: 200px;
