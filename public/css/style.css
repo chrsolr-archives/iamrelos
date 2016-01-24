@@ -19,6 +19,14 @@ p {
 .x-ng-cloak {
   display: none !important;
 }
+.form-control.iamrelos {
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid #777;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  margin-bottom: 10px;
+}
 nav.navigation-bar {
   background-color: #fff;
   color: #333;
@@ -204,7 +212,8 @@ nav.navigation-bar .navigation-bar-brand i:hover {
   }
 }
 #blog-wrapper {
-  margin-top: 100px;
+  padding-top: 100px;
+  padding-bottom: 20px;
 }
 html {
   font-size: 20px;
