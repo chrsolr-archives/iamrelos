@@ -9,6 +9,16 @@
             caseInsensitiveMatch: true,
             controller: 'HomeController',
             controllerAs: 'vm'
+        }).when('/blog', {
+            templateUrl: '/partials/blog.html',
+            caseInsensitiveMatch: true,
+            controller: 'BlogController',
+            controllerAs: 'vm',
+            resolve: {
+                initData: ['RouteResolverServices', function (RouteResolverServices) {
+                        return RouteResolverServices.resolveBlog();
+                    }]
+            }
         }).otherwise({
             redirectTo: '/'
         });

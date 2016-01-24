@@ -1,5 +1,7 @@
 ///<reference path="../../../typings/tsd.d.ts" />
 
+import IRouteResolverServices = app.services.IRouteResolverServices;
+
 ((): void => {
     'use strict';
 
@@ -16,6 +18,16 @@
             caseInsensitiveMatch: true,
             controller: 'HomeController',
             controllerAs: 'vm'
+        }).when('/blog', {
+            templateUrl: '/partials/blog.html',
+            caseInsensitiveMatch: true,
+            controller: 'BlogController',
+            controllerAs: 'vm',
+            resolve: {
+                initData: ['RouteResolverServices', (RouteResolverServices: IRouteResolverServices): any => {
+                    return RouteResolverServices.resolveBlog();
+                }]
+            }
         }).otherwise({
             redirectTo: '/'
         });

@@ -6,7 +6,13 @@ var app;
         var HomeController = (function () {
             function HomeController() {
                 var _this = this;
+                _this.startAnimation();
             }
+            HomeController.prototype.startAnimation = function () {
+                angular.element(document.querySelector('.title')).addClass('animated fadeInDown');
+                angular.element(document.querySelector('.subtitle')).addClass('animated fadeInUp');
+                angular.element(document.querySelector('.social-media-wrapper')).addClass('animated fadeInUp');
+            };
             HomeController.$inject = [];
             return HomeController;
         })();

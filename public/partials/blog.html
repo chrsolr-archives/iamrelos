@@ -1,0 +1,11 @@
+<div id="blog-wrapper">
+    <section class="container">
+        <div ng-repeat="blog in ::vm.blog">
+            <img ng-src="{{blog.imageUrl}}" alt="Blog Image" width="100%">
+            <h3 ng-bind="blog.title"></h3>
+            <h4 ng-bind="blog.author"></h4>
+            <a ng-href="/blog/{{blog.permalink}}">Read More...</a>
+
+        </div>
+    </section>
+</div>

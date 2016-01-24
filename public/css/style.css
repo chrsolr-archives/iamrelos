@@ -11,6 +11,14 @@ p {
   font-size: 1rem;
   margin-bottom: 1rem;
 }
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+  display: none !important;
+}
 nav.navigation-bar {
   background-color: #fff;
   color: #333;
@@ -156,6 +164,7 @@ nav.navigation-bar .navigation-bar-brand i:hover {
   text-align: center;
   margin: 0;
   padding: 0;
+  opacity: 0;
   -webkit-animation-delay: 1250ms;
   animation-delay: 1250ms;
 }
@@ -193,6 +202,9 @@ nav.navigation-bar .navigation-bar-brand i:hover {
   #home-content-wrapper .header-wrapper .subtitle {
     font-size: 1.5rem;
   }
+}
+#blog-wrapper {
+  margin-top: 100px;
 }
 html {
   font-size: 20px;
