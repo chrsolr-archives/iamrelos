@@ -149,6 +149,26 @@ nav.navigation-bar .navigation-bar-brand i:hover {
   position: relative;
   font-size: 1.7rem;
   top: -3.5vw;
+  -webkit-animation-delay: 500ms;
+  animation-delay: 500ms;
+}
+#home-content-wrapper .header-wrapper .social-media-wrapper {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  -webkit-animation-delay: 1500ms;
+  animation-delay: 1500ms;
+}
+#home-content-wrapper .header-wrapper .social-media-wrapper li {
+  display: inline;
+  padding: 20px;
+}
+#home-content-wrapper .header-wrapper .social-media-wrapper li a {
+  color: #777;
+}
+#home-content-wrapper .header-wrapper .social-media-wrapper li a:hover {
+  color: #333;
+  text-decoration: none;
 }
 @media only screen and (max-width: 543px) {
   #home-content-wrapper .header-wrapper .title {

@@ -32,6 +32,28 @@
       position: relative;
       font-size: 1.7rem;
       top: -3.5vw;
+      .animation-delay(500ms);
+    }
+
+    .social-media-wrapper {
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      .animation-delay(1500ms);
+
+      li {
+        display: inline;
+        padding: @space-level-4;
+
+        a {
+          color: @color-font-base-light;
+
+          &:hover {
+            color: @color-font-base;
+            text-decoration: none;
+          }
+        }
+      }
     }
   }
 
