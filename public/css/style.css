@@ -226,7 +226,7 @@ nav.navigation-bar .navigation-bar-brand i:hover {
 }
 #blog-wrapper .blog-title:hover,
 #blog-wrapper .blog-titlefocus {
-  color: #777777;
+  color: #333333;
   text-decoration: none;
 }
 #blog-wrapper .blog-author {
@@ -234,10 +234,6 @@ nav.navigation-bar .navigation-bar-brand i:hover {
   font-size: 0.8rem;
   display: block;
   margin-bottom: 1rem;
-}
-#blog-wrapper .blog-preview {
-  font-weight: 200;
-  font-size: 16px;
 }
 #blog-details-wrapper {
   padding-top: 100px;
