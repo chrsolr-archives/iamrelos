@@ -19,6 +19,16 @@
                         return RouteResolverServices.resolveBlog();
                     }]
             }
+        }).when('/blog/:permalink', {
+            templateUrl: '/partials/blog-details.html',
+            caseInsensitiveMatch: true,
+            controller: 'BlogDetailsController',
+            controllerAs: 'vm',
+            resolve: {
+                initData: ['$route', 'RouteResolverServices', function ($route, RouteResolverServices) {
+                        return RouteResolverServices.resolveBlogDetails($route.current.params.permalink);
+                    }]
+            }
         }).otherwise({
             redirectTo: '/'
         });

@@ -3,16 +3,17 @@
         <div class="row">
             <div class="col-md-3 col-md-push-9">
                 <input class="form-control iamrelos" type="search" placeholder="search" ng-model="vm.searchTerm" autofocus/>
-                <ul ng-repeat="blog in vm.blog | filter: vm.searchTerm">
-                    <li><a ng-href="/blog/{{::blog.permalink}}">{{::blog.title}}</a></li>
-                </ul>
+                <!--<ul ng-repeat="blog in vm.blog | filter: vm.searchTerm">-->
+                    <!--<li><a ng-href="/blog/{{::blog.permalink}}">{{::blog.title}}</a></li>-->
+                <!--</ul>-->
             </div>
             <div class="col-md-9 col-md-pull-3">
                 <div ng-repeat="blog in vm.blog | filter: vm.searchTerm">
                     <img ng-src="{{::blog.imageUrl}}" alt="Blog Image" width="100%">
-                    <h3 ng-bind="blog.title"></h3>
-                    <h4 ng-bind="'Author: ' + blog.author"></h4>
-                    <a ng-href="/blog/{{blog.permalink}}">Read More...</a>
+                    <a class="blog-title" ng-href="/blog/{{::blog.permalink}}" ng-bind="::blog.title"></a>
+                    <small class="blog-author" ng-bind="::blog.author"></small>
+                    <p class="blog-preview" ng-bind="::blog.preview"></p>
+                    <a ng-href="/blog/{{::blog.permalink}}">Read More...</a>
                 </div>
             </div>
         </div>

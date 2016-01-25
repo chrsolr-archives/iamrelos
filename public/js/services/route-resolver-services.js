@@ -19,6 +19,15 @@ var app;
                     };
                 });
             };
+            RouteResolverServices.prototype.resolveBlogDetails = function (permalink) {
+                return this.$q.all([
+                    this.CommonServices.getBlogDetails(permalink)
+                ]).then(function (results) {
+                    return {
+                        data: results[0]
+                    };
+                });
+            };
             RouteResolverServices.$inject = ['$q', 'CommonServices'];
             return RouteResolverServices;
         })();

@@ -28,6 +28,16 @@ import IRouteResolverServices = app.services.IRouteResolverServices;
                     return RouteResolverServices.resolveBlog();
                 }]
             }
+        }).when('/blog/:permalink', {
+            templateUrl: '/partials/blog-details.html',
+            caseInsensitiveMatch: true,
+            controller: 'BlogDetailsController',
+            controllerAs: 'vm',
+            resolve: {
+                initData: ['$route', 'RouteResolverServices', ($route: ng.route.IRouteService, RouteResolverServices: IRouteResolverServices): any => {
+                    return RouteResolverServices.resolveBlogDetails($route.current.params.permalink);
+                }]
+            }
         }).otherwise({
             redirectTo: '/'
         });

@@ -50,7 +50,7 @@ nav.navigation-bar .navigation-bar-brand {
 nav.navigation-bar .navigation-bar-brand a {
   line-height: 80px;
   color: #333;
-  font-size: 40px;
+  font-size: 2.2rem;
   font-weight: 200;
   transition: color 150ms linear;
 }
@@ -94,13 +94,13 @@ nav.navigation-bar .navigation-bar-brand i:hover {
   transition: opacity 300ms linear;
 }
 .navigation-sidebar-container .content .navigation-sidebar-brand {
-  font-size: 30px;
+  font-size: 2.2rem;
   font-weight: 200;
   padding-bottom: 3px;
   display: block;
 }
 .navigation-sidebar-container .content .divider-therefore {
-  font-size: 30px;
+  font-size: 2.2rem;
 }
 .navigation-sidebar-container .content ul {
   padding: 5px 0 0 0;
@@ -110,7 +110,7 @@ nav.navigation-bar .navigation-bar-brand i:hover {
   padding-bottom: 10px;
 }
 .navigation-sidebar-container .content ul li a {
-  font-size: 20px;
+  font-size: 1.2rem;
 }
 .navigation-sidebar-container .content ul li a:hover {
   text-decoration: none;
@@ -215,14 +215,39 @@ nav.navigation-bar .navigation-bar-brand i:hover {
   padding-top: 100px;
   padding-bottom: 20px;
 }
+#blog-wrapper .blog-title {
+  color: #333;
+  font-size: 2rem;
+  display: block;
+  margin: 0.5rem 0 0 0;
+}
+#blog-wrapper .blog-title:hover,
+#blog-wrapper .blog-titlefocus {
+  color: #777;
+  text-decoration: none;
+}
+#blog-wrapper .blog-author {
+  color: #777;
+  font-size: 0.8rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+#blog-wrapper .blog-preview {
+  font-weight: 200;
+  font-size: 16px;
+}
+.blog-details-wrapper {
+  padding-top: 100px;
+  padding-bottom: 20px;
+}
 html {
-  font-size: 20px;
+  font-size: 16px;
 }
 body {
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
   background-color: #fff;
-  color: #333;
+  color: #777;
   min-height: 100vh;
   text-transform: lowercase;
 }

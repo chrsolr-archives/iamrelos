@@ -6,6 +6,7 @@ module app.services {
 
     export interface IRouteResolverServices {
         resolveBlog(max?: number): ng.IPromise<any>;
+        resolveBlogDetails(permalink: string): ng.IPromise<any>;
     }
 
     class RouteResolverServices implements IRouteResolverServices {
@@ -17,6 +18,16 @@ module app.services {
         resolveBlog(max?: number): ng.IPromise<any> {
             return this.$q.all([
                 this.CommonServices.getBlog(max)
+            ]).then((results: any[]): any => {
+                return {
+                    data: results[0]
+                }
+            });
+        }
+
+        resolveBlogDetails(permalink: string): ng.IPromise<any> {
+            return this.$q.all([
+                this.CommonServices.getBlogDetails(permalink)
             ]).then((results: any[]): any => {
                 return {
                     data: results[0]

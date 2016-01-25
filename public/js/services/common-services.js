@@ -30,6 +30,22 @@ var app;
                 });
                 return q.promise;
             };
+            CommonServices.prototype.getBlogDetails = function (permalink) {
+                var q = this.$q.defer();
+                var Blog = Parse.Object.extend("Blog");
+                var query = new Parse.Query(Blog);
+                query.equalTo("isActive", true);
+                query.equalTo("permalink", permalink);
+                query.first({
+                    success: function (result) {
+                        q.resolve(result.toJSON());
+                    },
+                    error: function (error) {
+                        q.reject(error);
+                    }
+                });
+                return q.promise;
+            };
             CommonServices.$inject = ['$q'];
             return CommonServices;
         })();

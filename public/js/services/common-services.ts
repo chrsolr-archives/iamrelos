@@ -5,6 +5,7 @@ module app.services {
 
     export interface ICommonServices {
         getBlog(max?: number): ng.IPromise<any>;
+        getBlogDetails(permalink: string): ng.IPromise<any>;
     }
 
     class CommonServices implements ICommonServices {
@@ -33,6 +34,27 @@ module app.services {
                     });
 
                     q.resolve(data);
+                },
+                error: function(error) {
+                    q.reject(error);
+                }
+            });
+
+            return q.promise;
+        }
+
+        getBlogDetails(permalink: string): ng.IPromise<any> {
+            var q = this.$q.defer();
+
+            var Blog = Parse.Object.extend("Blog");
+            var query = new Parse.Query(Blog);
+
+            query.equalTo("isActive", true);
+            query.equalTo("permalink", permalink);
+
+            query.first({
+                success: function(result) {
+                    q.resolve(result.toJSON());
                 },
                 error: function(error) {
                     q.reject(error);

@@ -3,4 +3,33 @@
 #blog-wrapper {
   padding-top: @height-navbar + @space-level-4;
   padding-bottom: @space-level-4;
+
+  .blog-title {
+    color: @color-font-base;
+    font-size: @font-size-title;
+    display: block;
+    margin: 0.5rem 0 0 0;
+
+    &:hover, &focus {
+      color: @color-font-base-light;
+      text-decoration: none;
+    }
+  }
+
+  .blog-author {
+    color: @color-font-base-light;
+    font-size: @font-size-small;
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .blog-preview {
+    font-weight: @font-light-weight;
+    font-size: @font-size-base;
+  }
+}
+
+.blog-details-wrapper {
+  padding-top: @height-navbar + @space-level-4;
+  padding-bottom: @space-level-4;
 }
