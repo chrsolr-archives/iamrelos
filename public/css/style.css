@@ -167,7 +167,6 @@ nav.navigation-bar .navigation-bar-brand i:hover {
 #home-content-wrapper .header-wrapper .subtitle {
   position: relative;
   font-size: 1.7rem;
-  top: -3.5vw;
   -webkit-animation-delay: 500ms;
   animation-delay: 500ms;
 }
