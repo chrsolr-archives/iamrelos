@@ -72,6 +72,7 @@ module app.services {
             var query = new Parse.Query(Word);
 
             query.descending('createdAt');
+            query.equalTo("isActive", true);
             query.limit(1);
             
             query.first({
