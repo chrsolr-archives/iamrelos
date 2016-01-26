@@ -126,7 +126,7 @@ nav.navigation-bar .navigation-bar-brand i:hover {
 }
 .navigation-sidebar-container.open .content {
   opacity: 1;
-  transition: opacity 300ms linear 500ms;
+  transition: opacity 300ms linear 300ms;
 }
 @media only screen and (max-width: 543px), only screen and (min-width: 544px) and (max-width: 767px) {
   .navigation-sidebar-container.open {
