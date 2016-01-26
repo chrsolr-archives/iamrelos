@@ -34,6 +34,16 @@ module app.services {
                 }
             });
         }
+        
+        resolveHomeWord(): ng.IPromise<any> {
+            return this.$q.all([
+                this.CommonServices.getWord()
+            ]).then((results: any[]): any => {
+                return {
+                    data: results[0]
+                }
+            });
+        }
     }
 
     angular.module('app.services')

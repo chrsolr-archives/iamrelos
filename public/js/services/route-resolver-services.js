@@ -2,9 +2,9 @@
 ///<reference path="common-services.ts"/>
 var app;
 (function (app) {
-    var services;
     (function (services) {
         'use strict';
+
         var RouteResolverServices = (function () {
             function RouteResolverServices($q, CommonServices) {
                 this.$q = $q;
@@ -19,6 +19,7 @@ var app;
                     };
                 });
             };
+
             RouteResolverServices.prototype.resolveBlogDetails = function (permalink) {
                 return this.$q.all([
                     this.CommonServices.getBlogDetails(permalink)
@@ -28,11 +29,21 @@ var app;
                     };
                 });
             };
+
+            RouteResolverServices.prototype.resolveHomeWord = function () {
+                return this.$q.all([
+                    this.CommonServices.getWord()
+                ]).then(function (results) {
+                    return {
+                        data: results[0]
+                    };
+                });
+            };
             RouteResolverServices.$inject = ['$q', 'CommonServices'];
             return RouteResolverServices;
         })();
-        angular.module('app.services')
-            .service('RouteResolverServices', RouteResolverServices);
-    })(services = app.services || (app.services = {}));
+
+        angular.module('app.services').service('RouteResolverServices', RouteResolverServices);
+    })(app.services || (app.services = {}));
+    var services = app.services;
 })(app || (app = {}));
-//# sourceMappingURL=route-resolver-services.js.map

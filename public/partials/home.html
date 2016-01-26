@@ -1,12 +1,8 @@
 <div id="home-content-wrapper">
     <header class="header-wrapper">
         <div class="container">
-            <span class="title">creatividad</span>
-            <span class="subtitle">
-                La creatividad es la capacidad de generar nuevas ideas o conceptos,
-                o de nuevas asociaciones entre ideas y conceptos conocidos,
-                que habitualmente producen soluciones originales.
-            </span>
+            <span class="title" ng-bind="::vm.word.word"></span>
+            <span class="subtitle" ng-bind="::vm.word.definition"></span>
             <ul class="social-media-wrapper">
                 <li><a class="fa fa-2x fa-twitter" href="https://twitter.com/iamrelos" target="_blank"></a></li>
                 <li><a class="fa fa-2x fa-github" href="https://github.com/iamrelos?tab=repositories" target="_blank"></a></li>

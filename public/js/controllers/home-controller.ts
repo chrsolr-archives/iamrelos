@@ -3,15 +3,17 @@
 module app.controllers {
 
     interface IHomeController {
+        word: any;
         startAnimation(): void;
     }
 
     class HomeController implements IHomeController {
 
-        static $inject = [];
+        static $inject = ['initData'];
 
-        constructor() {
+        constructor(initData: any) {
             var _this = this;
+            _this.word = initData.data;
             _this.startAnimation();
         }
 

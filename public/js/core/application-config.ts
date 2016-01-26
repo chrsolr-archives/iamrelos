@@ -17,7 +17,12 @@ import IRouteResolverServices = app.services.IRouteResolverServices;
             templateUrl: '/partials/home.html',
             caseInsensitiveMatch: true,
             controller: 'HomeController',
-            controllerAs: 'vm'
+            controllerAs: 'vm',
+            resolve: {
+                initData: ['RouteResolverServices', (RouteResolverServices: IRouteResolverServices): any => {
+                    return RouteResolverServices.resolveHomeWord();
+                }]
+            }
         }).when('/blog', {
             templateUrl: '/partials/blog.html',
             caseInsensitiveMatch: true,
