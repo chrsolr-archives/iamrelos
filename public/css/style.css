@@ -22,7 +22,7 @@ p {
 .form-control.iamrelos {
   border-radius: 0;
   border: none;
-  border-bottom: 1px solid #777777;
+  border-bottom: 1px solid #777;
   -webkit-box-shadow: none;
   box-shadow: none;
   margin-bottom: 10px;
@@ -31,8 +31,8 @@ p {
   margin: 0;
 }
 nav.navigation-bar {
-  background-color: #ffffff;
-  color: #333333;
+  background-color: #fff;
+  color: #333;
   border-bottom: 2px solid #f1f1f1;
   min-height: 80px;
   position: fixed;
@@ -52,14 +52,14 @@ nav.navigation-bar .navigation-bar-brand {
 }
 nav.navigation-bar .navigation-bar-brand a {
   line-height: 80px;
-  color: #333333;
+  color: #333;
   font-size: 2.2rem;
   font-weight: 200;
   transition: color 150ms linear;
 }
 nav.navigation-bar .navigation-bar-brand a:hover,
 nav.navigation-bar .navigation-bar-brand a:focus {
-  color: #aaaaaa;
+  color: #aaa;
   text-decoration: none;
 }
 nav.navigation-bar .navigation-bar-brand i {
@@ -69,7 +69,7 @@ nav.navigation-bar .navigation-bar-brand i {
 }
 nav.navigation-bar .navigation-bar-brand i:hover,
 nav.navigation-bar .navigation-bar-brand i:focus {
-  color: #aaaaaa;
+  color: #aaa;
 }
 nav.navigation-bar .navigation-bar-brand i:hover {
   cursor: pointer;
@@ -120,8 +120,8 @@ nav.navigation-bar .navigation-bar-brand i:hover {
 }
 .navigation-sidebar-container.open {
   width: 25%;
-  -webkit-box-shadow: -10px 0px 10px -10px #777777;
-  box-shadow: -10px 0px 10px -10px #777777;
+  -webkit-box-shadow: -10px 0px 10px -10px #777;
+  box-shadow: -10px 0px 10px -10px #777;
   transition: width 300ms ease, box-shadow 300ms ease 300ms;
 }
 .navigation-sidebar-container.open .content {
@@ -158,7 +158,7 @@ nav.navigation-bar .navigation-bar-brand i:hover {
   display: block;
   text-align: center;
   font-weight: 100;
-  color: #777777;
+  color: #777;
   opacity: 0;
 }
 #home-content-wrapper .header-wrapper .title {
@@ -186,10 +186,10 @@ nav.navigation-bar .navigation-bar-brand i:hover {
   padding: 20px;
 }
 #home-content-wrapper .header-wrapper .social-media-wrapper li a {
-  color: #777777;
+  color: #777;
 }
 #home-content-wrapper .header-wrapper .social-media-wrapper li a:hover {
-  color: #333333;
+  color: #333;
   text-decoration: none;
 }
 @media only screen and (max-width: 543px) {
@@ -221,18 +221,18 @@ nav.navigation-bar .navigation-bar-brand i:hover {
   padding-bottom: 20px;
 }
 #blog-wrapper .blog-title {
-  color: #333333;
+  color: #333;
   font-size: 2rem;
   display: block;
   margin: 0.5rem 0 0 0;
 }
 #blog-wrapper .blog-title:hover,
 #blog-wrapper .blog-titlefocus {
-  color: #333333;
+  color: #333;
   text-decoration: none;
 }
 #blog-wrapper .blog-author {
-  color: #777777;
+  color: #777;
   font-size: 0.8rem;
   display: block;
   margin-bottom: 1rem;
@@ -247,8 +247,8 @@ html {
 body {
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
-  background-color: #ffffff;
-  color: #333333;
+  background-color: #fff;
+  color: #333;
   min-height: 100vh;
   text-transform: lowercase;
 }
