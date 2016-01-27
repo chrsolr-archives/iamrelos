@@ -3,6 +3,7 @@ var app;
 (function (app) {
     var controllers;
     (function (controllers) {
+        'use strict';
         var BlogDetailsController = (function () {
             function BlogDetailsController(initData, $sce) {
                 this.initData = initData;
@@ -13,7 +14,7 @@ var app;
             BlogDetailsController.prototype.sanitizeHTML = function (html) {
                 return this.$sce.trustAsHtml(html);
             };
-            BlogDetailsController.$inject = ['initData', '$sce'];
+            BlogDetailsController.$inject = ['initData', '$sce', 'CommonServices'];
             return BlogDetailsController;
         })();
         angular.module('app.controllers')

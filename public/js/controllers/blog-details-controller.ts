@@ -1,6 +1,7 @@
 ///<reference path="../../../typings/tsd.d.ts" />
 
 module app.controllers {
+    'use strict';
 
     interface IBlogDetailsController {
         blog: any;
@@ -10,7 +11,7 @@ module app.controllers {
     class BlogDetailsController implements IBlogDetailsController {
         blog: any;
 
-        static $inject = ['initData', '$sce'];
+        static $inject = ['initData', '$sce', 'CommonServices'];
 
         constructor(private initData, private $sce: ng.ISCEService) {
             var _this = this;

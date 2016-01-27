@@ -5,8 +5,9 @@ module app.services {
     'use strict';
 
     export interface IRouteResolverServices {
-        resolveBlog(max?: number): ng.IPromise<any>;
-        resolveBlogDetails(permalink: string): ng.IPromise<any>;
+        resolveBlog(max?: number): Parse.IPromise<any>;
+        resolveBlogDetails(permalink: string): Parse.IPromise<any>;
+        resolveHomeWord(): Parse.IPromise<any>;
     }
 
     class RouteResolverServices implements IRouteResolverServices {
@@ -15,7 +16,7 @@ module app.services {
 
         constructor(private $q: ng.IQService, private CommonServices: ICommonServices){ }
 
-        resolveBlog(max?: number): ng.IPromise<any> {
+        resolveBlog(max?: number): Parse.IPromise<any> {
             return this.$q.all([
                 this.CommonServices.getBlog(max)
             ]).then((results: any[]): any => {
@@ -25,19 +26,19 @@ module app.services {
             });
         }
 
-        resolveBlogDetails(permalink: string): ng.IPromise<any> {
+        resolveBlogDetails(permalink: string): Parse.IPromise<any> {
             return this.$q.all([
-                this.CommonServices.getBlogDetails(permalink)
+                this.CommonServices.getBlog(1, permalink)
             ]).then((results: any[]): any => {
                 return {
-                    data: results[0]
+                    data: results[0][0]
                 }
             });
         }
         
-        resolveHomeWord(): ng.IPromise<any> {
+        resolveHomeWord(): Parse.IPromise<any> {
             return this.$q.all([
-                this.CommonServices.getWord()
+                this.CommonServices.getRandomWord()
             ]).then((results: any[]): any => {
                 return {
                     data: results[0]

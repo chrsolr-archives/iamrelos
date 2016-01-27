@@ -3,89 +3,28 @@
 module app.services {
     'use strict';
 
+    import IPromise = Parse.IPromise;
+
     export interface ICommonServices {
-        getBlog(max?: number): ng.IPromise<any>;
-        getBlogDetails(permalink: string): ng.IPromise<any>;
-        getWord(): ng.IPromise<any>;
+        getBlog(max?:number, permalink?:string): IPromise<any>;
+        getRandomWord(): ng.IPromise<any>;
     }
 
     class CommonServices implements ICommonServices {
 
         static $inject = ['$q'];
 
-        constructor(private $q:ng.IQService) {}
-
-        getBlog(max?: number): ng.IPromise<any> {
-            var queryLimit = max || 50;
-            var q = this.$q.defer();
-
-            var Blog = Parse.Object.extend("Blog");
-            var query = new Parse.Query(Blog);
-
-            query.descending('createdAt');
-            query.equalTo("isActive", true);
-            query.limit(queryLimit);
-
-            query.find({
-                success: function(results) {
-                    var data = [];
-
-                    angular.forEach(results, (value, key) => {
-                        data.push(value.toJSON());
-                    });
-
-                    q.resolve(data);
-                },
-                error: function(error) {
-                    q.reject(error);
-                }
-            });
-
-            return q.promise;
+        constructor(private $q:ng.IQService) {
         }
 
-        getBlogDetails(permalink: string): ng.IPromise<any> {
-            var q = this.$q.defer();
-
-            var Blog = Parse.Object.extend("Blog");
-            var query = new Parse.Query(Blog);
-
-            query.equalTo("isActive", true);
-            query.equalTo("permalink", permalink);
-
-            query.first({
-                success: function(result) {
-                    q.resolve(result.toJSON());
-                },
-                error: function(error) {
-                    q.reject(error);
-                }
-            });
-
-            return q.promise;
+        getBlog(max?:number, permalink?:string):IPromise<any> {
+            return Parse.Cloud.run('getBlog', {max: max, permalink: permalink});
         }
-        
-        getWord(): ng.IPromise<any> {
-            var q = this.$q.defer();
 
-            var Word = Parse.Object.extend("Word");
-            var query = new Parse.Query(Word);
-
-            query.descending('createdAt');
-            query.equalTo("isActive", true);
-            query.limit(1);
-            
-            query.first({
-                success: function(result) {
-                    q.resolve(result.toJSON());
-                },
-                error: function(error) {
-                    q.reject(error);
-                }
-            });
-
-            return q.promise;
+        getRandomWord():IPromise<any> {
+            return Parse.Cloud.run('getRandomWord');
         }
+
     }
 
     angular.module('app.services')
