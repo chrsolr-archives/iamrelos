@@ -5,8 +5,7 @@ var app;
     (function (services) {
         'use strict';
         var CommonServices = (function () {
-            function CommonServices($q) {
-                this.$q = $q;
+            function CommonServices() {
             }
             CommonServices.prototype.getBlog = function (max, permalink) {
                 return Parse.Cloud.run('getBlog', { max: max, permalink: permalink });
@@ -14,7 +13,7 @@ var app;
             CommonServices.prototype.getRandomWord = function () {
                 return Parse.Cloud.run('getRandomWord');
             };
-            CommonServices.$inject = ['$q'];
+            CommonServices.$inject = [];
             return CommonServices;
         })();
         angular.module('app.services')

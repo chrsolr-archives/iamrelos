@@ -7,14 +7,14 @@ module app.services {
 
     export interface ICommonServices {
         getBlog(max?:number, permalink?:string): IPromise<any>;
-        getRandomWord(): ng.IPromise<any>;
+        getRandomWord(): IPromise<any>;
     }
 
     class CommonServices implements ICommonServices {
 
-        static $inject = ['$q'];
+        static $inject = [];
 
-        constructor(private $q:ng.IQService) {
+        constructor() {
         }
 
         getBlog(max?:number, permalink?:string):IPromise<any> {
