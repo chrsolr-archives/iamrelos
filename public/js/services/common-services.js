@@ -30,7 +30,14 @@ var app;
             };
 
             CommonServices.prototype.getRandomWord = function () {
-                return Parse.Cloud.run('getRandomWord');
+                var _this = this;
+                var q = _this.$q.defer();
+
+                _this.$http.get('/api/quotes').success(function (res) {
+                    q.resolve(res);
+                });
+
+                return q.promise;
             };
             CommonServices.$inject = ['$http', '$q'];
             return CommonServices;

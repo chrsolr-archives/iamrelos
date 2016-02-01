@@ -39,7 +39,14 @@ module app.services {
         }
 
         getRandomWord():IPromise<any> {
-            return Parse.Cloud.run('getRandomWord');
+            var _this = this;
+            var q = _this.$q.defer();
+            
+            _this.$http.get('/api/quotes').success((res: any[]) => {
+                q.resolve(res);
+            });
+            
+            return q.promise;
         }
 
     }
