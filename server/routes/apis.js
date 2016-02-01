@@ -16,7 +16,7 @@ module.exports = function (app, express) {
         })
     });
 
-    api.get('/blog', function(req, res){
+    api.get('/blogs', function(req, res){
         
         Blog.find({isActive: true}, function(err, data) {
             var blogs = [];

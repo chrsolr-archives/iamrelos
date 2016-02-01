@@ -11,14 +11,31 @@ module app.services {
     }
 
     class CommonServices implements ICommonServices {
+        blogs: any[];
+        
+        static $inject = ['$http', '$q'];
 
-        static $inject = [];
-
-        constructor() {
+        constructor(private $http:ng.IHttpService, private $q:ng.IQService) {
+            this.blogs = [];
         }
 
         getBlog(max?:number, permalink?:string):IPromise<any> {
-            return Parse.Cloud.run('getBlog', {max: max, permalink: permalink});
+            var _this = this;
+            var limit = max || 10;
+            var q = _this.$q.defer();
+            
+            if (blogs.length === 0){
+                this.http.get('/api/blogs?limit=' + limit + '&permalink=' + permalink).success((data: any[]) => {
+                    _this.blogs = data;
+                    q.resolve(_this.blogs);
+                });
+                
+                return q.promise;
+            }
+            
+            q.resolve(_this.blogs);
+            
+            return q.promise;
         }
 
         getRandomWord():IPromise<any> {
