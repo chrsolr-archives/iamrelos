@@ -1,4 +1,5 @@
 var Quote = require('../models/quote');
+var Blog = require('../models/blog');
 
 module.exports = function (app, express) {
 
@@ -16,6 +17,17 @@ module.exports = function (app, express) {
     });
 
     api.get('/blog', function(req, res){
+        
+        Blog.find({}, function(err, data) {
+            var blogs = [];
+            
+            if (err) throw err;
+            
+            blogs.forEach(function(value){
+                blogs.push(value.toVM());
+            })
 
+            res.status(200).send(blogs);
+        })
     });
 };
