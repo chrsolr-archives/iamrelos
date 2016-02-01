@@ -17,7 +17,7 @@ module.exports = function (app, express) {
             if (error && response.statusCode !== 200) throw error;
             
             var json = JSON.parse(response.body);
-            
+            console.log(json);
             var quote = {
                 quote: json.quote,
                 author: json.author
