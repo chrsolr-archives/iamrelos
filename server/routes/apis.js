@@ -21,7 +21,7 @@ module.exports = function (app, express) {
         var query = { isActive: true };
         var limit = req.query.limit || 10;
         var permalink = req.query.permalink;
-        console.log(permalink);
+
         if (typeof permalink !== 'undefined' && permalink !== 'undefined') query.permalink = permalink;
         
         Blog.find(query).sort({'createdAt': -1}).limit(limit).exec(function(err, data) {
@@ -32,7 +32,7 @@ module.exports = function (app, express) {
             data.forEach(function(value){
                 blogs.push(value.toVM());
             });
-            console.log(data);
+            
             return res.status(200).send(blogs);
         })
     });
