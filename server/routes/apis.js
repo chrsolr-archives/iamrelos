@@ -25,8 +25,9 @@ module.exports = function (app, express) {
             
             blogs.forEach(function(value){
                 blogs.push(value.toVM());
-            })
-
+            });
+            console.log(data);
+            console.log(blogs);
             res.status(200).send(blogs);
         })
     });
