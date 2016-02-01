@@ -27,7 +27,7 @@ module.exports = function (app, express) {
                 blogs.push(value.toVM());
             });
             console.log(blogs);
-            res.status(200).send(blogs);
+            res.status(200).send(data);
         })
     });
 };
