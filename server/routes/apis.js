@@ -12,7 +12,7 @@ module.exports = function (app, express) {
         Quote.findOne({}, function(err, data) {
             if (err) throw err;
 
-            return res.status(200).json(data);
+            return res.status(200).send(data);
         })
     });
 
@@ -23,11 +23,11 @@ module.exports = function (app, express) {
             
             if (err) throw err;
             
-            blogs.forEach(function(value){
+            data.forEach(function(value){
                 blogs.push(value.toVM());
             });
             
-            return res.status(200).json(blogs);
+            return res.status(200).send(blogs);
         })
     });
 };
