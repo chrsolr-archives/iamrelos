@@ -16,8 +16,8 @@ var app;
                 var q = _this.$q.defer();
 
                 if (_this.blogs.length === 0) {
-                    _this.$http.get('/api/blogs?limit=' + limit + '&permalink=' + permalink).success(function (data) {
-                        _this.blogs = data;
+                    _this.$http.get('/api/blogs?limit=' + limit + '&permalink=' + permalink).success(function (res) {
+                        _this.blogs = res;
                         q.resolve(_this.blogs);
                     });
 

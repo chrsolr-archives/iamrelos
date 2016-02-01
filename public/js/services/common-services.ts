@@ -25,8 +25,8 @@ module app.services {
             var q = _this.$q.defer();
             
             if (_this.blogs.length === 0){
-                _this.$http.get('/api/blogs?limit=' + limit + '&permalink=' + permalink).success((data: any[]) => {
-                    _this.blogs = data;
+                _this.$http.get('/api/blogs?limit=' + limit + '&permalink=' + permalink).success((res: any[]) => {
+                    _this.blogs = res;
                     q.resolve(_this.blogs);
                 });
                 
