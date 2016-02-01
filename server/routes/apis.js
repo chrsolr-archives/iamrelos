@@ -1,5 +1,4 @@
 var request = require('request');
-var Quote = require('../models/quote');
 var Blog = require('../models/blog');
 
 module.exports = function (app, express) {
@@ -8,16 +7,18 @@ module.exports = function (app, express) {
 
     app.use('/api', api);
 
+    /**
+     * Get random programming quote
+     */
     api.get('/quotes', function (req, res) {
-        // NOTE: Get random programming quote from this url: http://quotes.stormconsultancy.co.uk/random.json
-        // returns: (id: int), (author: string), (quote: string), (permalink: string)
+        
         var url = 'http://quotes.stormconsultancy.co.uk/random.json';
         
         request(url, function (error, response, body) {
             if (error && response.statusCode !== 200) throw error;
             
             var json = JSON.parse(response.body);
-            console.log(json);
+
             var quote = {
                 quote: json.quote,
                 author: json.author
@@ -27,6 +28,11 @@ module.exports = function (app, express) {
         });
     });
 
+    /**
+     * Get List of blog post.
+     * Query String: {number}: limit => max amount to return.
+     * Query String: {string}: permalink => permalink of specific blog post
+     */
     api.get('/blogs', function(req, res){
         
         var query = { isActive: true };
