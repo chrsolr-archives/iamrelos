@@ -1,4 +1,5 @@
 var request = require('request');
+var errorHandler = require('../modules/error-handler');
 var Blog = require('../models/blog');
 
 module.exports = function (app, express) {
@@ -15,7 +16,8 @@ module.exports = function (app, express) {
         var url = 'http://quotes.stormconsultancy.co.uk/random.json';
         
         request(url, function (error, response, body) {
-            if (error && response.statusCode !== 200) throw error;
+
+            if (error && response.statusCode !== 200) errorHandler.parse({code: response.statusCode, message: response.statusMessage});
             
             var json = JSON.parse(response.body);
 

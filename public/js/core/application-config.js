@@ -1,11 +1,8 @@
 ///<reference path="../../../typings/tsd.d.ts" />
 (function () {
     'use strict';
-
     angular.module('app').config(config);
-
     config.$inject = ['$routeProvider', '$locationProvider', 'cfpLoadingBarProvider'];
-
     function config($routeProvider, $locationProvider, cfpLoadingBarProvider) {
         $routeProvider.when('/', {
             templateUrl: '/partials/home.html',
@@ -13,8 +10,7 @@
             controller: 'HomeController',
             controllerAs: 'vm',
             resolve: {
-                initData: [
-                    'RouteResolverServices', function (RouteResolverServices) {
+                initData: ['RouteResolverServices', function (RouteResolverServices) {
                         return RouteResolverServices.resolveHomeWord();
                     }]
             }
@@ -24,8 +20,7 @@
             controller: 'BlogController',
             controllerAs: 'vm',
             resolve: {
-                initData: [
-                    'RouteResolverServices', function (RouteResolverServices) {
+                initData: ['RouteResolverServices', function (RouteResolverServices) {
                         return RouteResolverServices.resolveBlog();
                     }]
             }
@@ -35,17 +30,15 @@
             controller: 'BlogDetailsController',
             controllerAs: 'vm',
             resolve: {
-                initData: [
-                    '$route', 'RouteResolverServices', function ($route, RouteResolverServices) {
+                initData: ['$route', 'RouteResolverServices', function ($route, RouteResolverServices) {
                         return RouteResolverServices.resolveBlogDetails($route.current.params.permalink);
                     }]
             }
         }).otherwise({
             redirectTo: '/'
         });
-
         $locationProvider.html5Mode(true);
-
         cfpLoadingBarProvider.includeSpinner = false;
     }
 })();
+//# sourceMappingURL=application-config.js.map
