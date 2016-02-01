@@ -24,7 +24,7 @@ module app.services {
             var limit = max || 10;
             var q = _this.$q.defer();
             
-            if (blogs.length === 0){
+            if (_this.blogs.length === 0){
                 this.http.get('/api/blogs?limit=' + limit + '&permalink=' + permalink).success((data: any[]) => {
                     _this.blogs = data;
                     q.resolve(_this.blogs);
