@@ -22,7 +22,7 @@ module.exports = function (app, express) {
         var limit = req.query.limit || 10;
         var permalink = req.query.permalink;
         
-        if (permalink) { console.log("Permalink: " + permalink); query.permalink = permalink; }
+        if (typeof permalink !== 'undefined') { console.log("Permalink: " + permalink); query.permalink = permalink; }
         
         Blog.find(query).sort({'createdAt': -1}).limit(limit).exec(function(err, data) {
             var blogs = [];
