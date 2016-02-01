@@ -25,9 +25,9 @@ Blog.methods.toVM = function(){
         tags: this.tags,
         createdAt: this.createdAt,
         updateAt: this.updateAt,
-        comment: this.comment
+        comments: this.comment
     };
 };
 
 
-module.exports = mongoose.model('blog', Blog);
+module.exports = mongoose.model('blogs', Blog);
