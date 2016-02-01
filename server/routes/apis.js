@@ -18,7 +18,15 @@ module.exports = function (app, express) {
 
     api.get('/blogs', function(req, res){
         
-        Blog.find({isActive: true}, function(err, data) {
+        var limit = req.query.limit || 10;
+        var permalink = req.query.permalink;
+        
+        var query = {};
+        query.isActive = true;
+        
+        if (permalink) query.permalink = permalink;
+        
+        Blog.find(query).sort({'createdAt': -1}).limit(limit).exec(function(err, data) {
             var blogs = [];
             
             if (err) throw err;
