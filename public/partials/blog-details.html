@@ -1,5 +1,5 @@
 <div id="blog-details-wrapper">
-    <div class="container">
+    <section class="container">
         <img src="{{::vm.blog.imageUrl}}" alt="Blog Title" class="img-responsive" width="100%">
         <h2 ng-bind="::vm.blog.title"></h2>
         <p ng-bind-html="vm.sanitizeHTML(vm.blog.content)"></p>
