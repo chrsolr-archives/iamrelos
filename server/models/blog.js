@@ -1,7 +1,17 @@
 var mongoose = require('mongoose');
 
 var Blog = mongoose.Schema({
-    
+    imageUrl: String,
+    title: String,
+    permalink: String,
+    isActive: {type: Boolean, default: false},
+    author: String,
+    tags: Array,
+    createdAt: {type: Date, default: Date.now},
+    updatedAt: {type: Date, default: Date.now},
+    preview: String,
+    content: String,
+    comments: [{author: String, content: String, createdAt: Date}]
 });
 
 Blog.methods.toVM = function(){
@@ -14,7 +24,8 @@ Blog.methods.toVM = function(){
         content: this.content,
         tags: this.tags,
         createdAt: this.createdAt,
-        updateAt: this.updateAt
+        updateAt: this.updateAt,
+        comment: this.comment
     };
 };
 
