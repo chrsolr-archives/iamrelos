@@ -1,19 +1,15 @@
 ///<reference path="../../../typings/tsd.d.ts" />
 
 module app.controllers {
-
-    interface IHomeController {
-        word: any;
-        startAnimation(): void;
-    }
-
-    class HomeController implements IHomeController {
+    'use strict';
+    
+    class HomeController {
 
         static $inject = ['initData'];
 
         constructor(initData: any) {
             var _this = this;
-            _this.word = initData.data;
+            _this.quote = initData.data;
             _this.startAnimation();
         }
 

@@ -1,13 +1,9 @@
 ///<reference path="../../../typings/tsd.d.ts" />
 
 module app.controllers {
+    'use strict';
 
-    interface IBlogController {
-        blog: any[];
-        searchTerm: string;
-    }
-
-    class BlogController implements IBlogController {
+    class BlogController {
         blog: any[];
         searchTerm: string;
 

@@ -3,12 +3,7 @@
 module app.controllers {
     'use strict';
 
-    interface IBlogDetailsController {
-        blog: any;
-        sanitizeHTML(html: string): string;
-    }
-
-    class BlogDetailsController implements IBlogDetailsController {
+    class BlogDetailsController {
         blog: any;
 
         static $inject = ['initData', '$sce', 'CommonServices'];

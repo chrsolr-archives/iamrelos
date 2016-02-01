@@ -1,12 +1,13 @@
 ///<reference path="../../../typings/tsd.d.ts" />
 var app;
 (function (app) {
-    var controllers;
     (function (controllers) {
+        'use strict';
+
         var HomeController = (function () {
             function HomeController(initData) {
                 var _this = this;
-                _this.word = initData.data;
+                _this.quote = initData.data;
                 _this.startAnimation();
             }
             HomeController.prototype.startAnimation = function () {
@@ -17,8 +18,8 @@ var app;
             HomeController.$inject = ['initData'];
             return HomeController;
         })();
-        angular.module('app.controllers')
-            .controller('HomeController', HomeController);
-    })(controllers = app.controllers || (app.controllers = {}));
+
+        angular.module('app.controllers').controller('HomeController', HomeController);
+    })(app.controllers || (app.controllers = {}));
+    var controllers = app.controllers;
 })(app || (app = {}));
-//# sourceMappingURL=home-controller.js.map

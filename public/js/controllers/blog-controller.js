@@ -1,8 +1,9 @@
 ///<reference path="../../../typings/tsd.d.ts" />
 var app;
 (function (app) {
-    var controllers;
     (function (controllers) {
+        'use strict';
+
         var BlogController = (function () {
             function BlogController(initData) {
                 this.initData = initData;
@@ -12,8 +13,8 @@ var app;
             BlogController.$inject = ['initData'];
             return BlogController;
         })();
-        angular.module('app.controllers')
-            .controller('BlogController', BlogController);
-    })(controllers = app.controllers || (app.controllers = {}));
+
+        angular.module('app.controllers').controller('BlogController', BlogController);
+    })(app.controllers || (app.controllers = {}));
+    var controllers = app.controllers;
 })(app || (app = {}));
-//# sourceMappingURL=blog-controller.js.map
