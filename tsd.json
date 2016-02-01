@@ -17,9 +17,6 @@
     "angular-loading-bar/angular-loading-bar.d.ts": {
       "commit": "2e7a477ac2b6471055aa6e0e56b333e8f327d6b7"
     },
-    "parse/parse.d.ts": {
-      "commit": "7fffbd3e040a93c244777e3be04cd6223ac69301"
-    },
     "node/node.d.ts": {
       "commit": "7fffbd3e040a93c244777e3be04cd6223ac69301"
     },
