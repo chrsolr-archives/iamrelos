@@ -15,17 +15,19 @@ var Blog = mongoose.Schema({
 });
 
 Blog.methods.toVM = function(){
+    var _this = this;
+    
     return {
-        title: this.title,
-        author: this.author,
-        imageUrl: this.imageUrl,
-        permalink: this.permalink,
-        preview: this.preview,
-        content: this.content,
-        tags: this.tags,
-        createdAt: this.createdAt,
-        updateAt: this.updateAt,
-        comments: this.comment
+        title: _this.title,
+        author: _this.author,
+        imageUrl: _this.imageUrl,
+        permalink: _this.permalink,
+        preview: _this.preview,
+        content: _this.content,
+        tags: _this.tags,
+        createdAt: _this.createdAt,
+        updateAt: _this.updateAt,
+        comments: _this.comments
     };
 };
 

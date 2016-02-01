@@ -18,7 +18,7 @@ module.exports = function (app, express) {
 
     api.get('/blog', function(req, res){
         
-        Blog.find({}, function(err, data) {
+        Blog.find({isActive: true}, function(err, data) {
             var blogs = [];
             
             if (err) throw err;
@@ -26,8 +26,8 @@ module.exports = function (app, express) {
             blogs.forEach(function(value){
                 blogs.push(value.toVM());
             });
-            console.log(blogs);
-            res.status(200).send(data);
+            
+            res.status(200).send(blogs);
         })
     });
 };
