@@ -162,12 +162,12 @@ nav.navigation-bar .navigation-bar-brand i:hover {
   opacity: 0;
 }
 #home-content-wrapper .header-wrapper .title {
-  font-size: 10rem;
+  font-size: 7rem;
 }
 #home-content-wrapper .header-wrapper .subtitle {
   position: relative;
   font-size: 1.7rem;
-  top: -3vw;
+  top: -1vw;
   -webkit-animation-delay: 500ms;
   animation-delay: 500ms;
 }
@@ -176,7 +176,7 @@ nav.navigation-bar .navigation-bar-brand i:hover {
   margin: 0;
   padding: 0;
   opacity: 0;
-  top: -1.8vw;
+  top: -0.2vw;
   position: relative;
   -webkit-animation-delay: 1250ms;
   animation-delay: 1250ms;
