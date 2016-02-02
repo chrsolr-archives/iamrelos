@@ -15,8 +15,9 @@ var app;
                 var limit = max || 10;
                 var q = _this.$q.defer();
                 if (_this.blogs.length === 0) {
-                    _this.$http.get('/api/blogs?limit=' + limit + '&permalink=' + permalink).success(function (res) {
-                        _this.blogs = res;
+                    _this.$http.get('/api/blogs?limit=' + limit + '&permalink=' + permalink)
+                        .then(function (res) {
+                        _this.blogs = res.data;
                         q.resolve(_this.blogs);
                     });
                     return q.promise;
@@ -27,9 +28,7 @@ var app;
             CommonServices.prototype.getRandomWord = function () {
                 var _this = this;
                 var q = _this.$q.defer();
-                _this.$http.get('/api/quotes').success(function (res) {
-                    q.resolve(res);
-                });
+                _this.$http.get('/api/quotes').then(function (res) { q.resolve(res.data); });
                 return q.promise;
             };
             CommonServices.$inject = ['$http', '$q'];

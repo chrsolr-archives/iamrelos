@@ -1,2 +1,2 @@
-# Iamrelos Website
+# iamrelos Website
 Personal Website

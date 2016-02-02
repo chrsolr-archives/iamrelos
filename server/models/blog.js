@@ -31,5 +31,4 @@ Blog.methods.toVM = function(){
     };
 };
 
-
 module.exports = mongoose.model('blogs', Blog);

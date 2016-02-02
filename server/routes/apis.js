@@ -1,5 +1,5 @@
 var request = require('request');
-var errorHandler = require('../modules/error-handler');
+var ExceptionHandler = require('../modules/exception-handler');
 var Blog = require('../models/blog');
 
 module.exports = function (app, express) {
@@ -13,11 +13,14 @@ module.exports = function (app, express) {
      */
     api.get('/quotes', function (req, res) {
         
-        var url = 'http://quotes.stormconsultancy.co.uk/random.json';
+        var url = 'http://quotes.stormconsultancy.co.uk/random.jso';
         
         request(url, function (error, response, body) {
 
-            if (error && response.statusCode !== 200) errorHandler.parse({code: response.statusCode, message: response.statusMessage});
+            if (error || response.statusCode !== 200) {
+                var err = ExceptionHandler.requestJsException(response);
+                return res.status(err.statusCode).send(err);
+            }
             
             var json = JSON.parse(response.body);
 
