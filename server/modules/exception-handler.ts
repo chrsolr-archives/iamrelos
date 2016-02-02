@@ -2,9 +2,9 @@ module ExceptionHandler {
     'use strict';
         
     /**
-     * Handler RequestJs Exceptions
+     * Handler RequestJS Exceptions
      */
-    export function requestJsException(error: any) {
+    export function requestJsException(error: any): any {
         console.error(`Error: ${error.statusCode}, ${error.statusMessage}`);
         
         return {

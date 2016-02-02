@@ -2,7 +2,7 @@ var ExceptionHandler;
 (function (ExceptionHandler) {
     'use strict';
     /**
-     * Handler RequestJs Exceptions
+     * Handler RequestJS Exceptions
      */
     function requestJsException(error) {
         console.error("Error: " + error.statusCode + ", " + error.statusMessage);
@@ -15,3 +15,4 @@ var ExceptionHandler;
     ExceptionHandler.requestJsException = requestJsException;
 })(ExceptionHandler || (ExceptionHandler = {}));
 module.exports = ExceptionHandler;
+//# sourceMappingURL=exception-handler.js.map

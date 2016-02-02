@@ -24,7 +24,7 @@ module app.services {
             
             if (_this.blogs.length === 0){
                 _this.$http.get('/api/blogs?limit=' + limit + '&permalink=' + permalink)
-                .then((res: any[]) => {
+                .then((res: any) => {
                     _this.blogs = res.data;
                     q.resolve(_this.blogs);
                 });

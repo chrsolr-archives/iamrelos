@@ -32,3 +32,4 @@ var app;
             .service('RouteResolverServices', RouteResolverServices);
     })(services = app.services || (app.services = {}));
 })(app || (app = {}));
+//# sourceMappingURL=route-resolver-services.js.map
