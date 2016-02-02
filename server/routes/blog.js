@@ -14,10 +14,8 @@ module.exports = function (api) {
         if (typeof query.permalink === 'undefined' || query.permalink === 'undefined')
             delete query.permalink;
 
-        Blog.find(query).sort({'createdAt': -1}).limit(limit).exec(function (err, data) {
+        Blog.get(query, limit, function (data) {
             var blogs = [];
-
-            if (err) throw err;
 
             data.forEach(function (value) {
                 blogs.push(value.toVM());

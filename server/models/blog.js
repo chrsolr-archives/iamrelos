@@ -31,4 +31,10 @@ Blog.methods.toVM = function(){
     };
 };
 
+Blog.statics.get = function (query, limit, callback) {
+    this.find(query).sort({'createdAt': -1}).limit(limit || 10).exec(function(err, data) {
+        if (!err) return callback(data);
+    });
+};
+
 module.exports = mongoose.model('blogs', Blog);
