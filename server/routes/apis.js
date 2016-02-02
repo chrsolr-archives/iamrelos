@@ -13,7 +13,7 @@ module.exports = function (app, express) {
      */
     api.get('/quotes', function (req, res) {
         
-        var url = 'http://quotes.stormconsultancy.co.uk/random.jso';
+        var url = 'http://quotes.stormconsultancy.co.uk/random.json';
         
         request(url, function (error, response, body) {
 
