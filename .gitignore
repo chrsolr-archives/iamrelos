@@ -33,3 +33,4 @@ typings
 public/css/*.css
 !public/css/style.css
 .c9
+.vscode

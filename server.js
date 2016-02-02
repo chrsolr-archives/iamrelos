@@ -36,7 +36,7 @@ if (process.env.NODE_ENV === 'dev') {
         outSourceMap: "application.min.js.map"
     });
 
-    fs.writeFileSync('./public/js/application.min.js', uglified.code);
+    //fs.writeFileSync('./public/js/application.min.js', uglified.code);
 }
 
 mongoose.connect(config.database.url);

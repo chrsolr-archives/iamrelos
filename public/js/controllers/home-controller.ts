@@ -4,6 +4,7 @@ module app.controllers {
     'use strict';
     
     class HomeController {
+        quote: any[];
 
         static $inject = ['initData'];
 

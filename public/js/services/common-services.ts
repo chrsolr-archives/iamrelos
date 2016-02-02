@@ -3,11 +3,9 @@
 module app.services {
     'use strict';
 
-    import IPromise = Parse.IPromise;
-
     export interface ICommonServices {
-        getBlog(max?:number, permalink?:string): IPromise<any>;
-        getRandomWord(): IPromise<any>;
+        getBlog(max?:number, permalink?:string): ng.IPromise<any>;
+        getRandomWord(): ng.IPromise<any>;
     }
 
     class CommonServices implements ICommonServices {
@@ -19,7 +17,7 @@ module app.services {
             this.blogs = [];
         }
 
-        getBlog(max?:number, permalink?:string):IPromise<any> {
+        getBlog(max?:number, permalink?:string):ng.IPromise<any> {
             var _this = this;
             var limit = max || 10;
             var q = _this.$q.defer();
@@ -38,7 +36,7 @@ module app.services {
             return q.promise;
         }
 
-        getRandomWord():IPromise<any> {
+        getRandomWord():ng.IPromise<any> {
             var _this = this;
             var q = _this.$q.defer();
             

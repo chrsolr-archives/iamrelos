@@ -39,4 +39,3 @@ var app;
             .service('CommonServices', CommonServices);
     })(services = app.services || (app.services = {}));
 })(app || (app = {}));
-//# sourceMappingURL=common-services.js.map
