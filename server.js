@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
-var app = require('./config/express')();
-var config = require('./config/config');
+var app = require('./server/config/express')();
+var config = require('./server/config/config');
 
 if (process.env.NODE_ENV === 'dev') {
 

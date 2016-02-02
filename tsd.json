@@ -17,20 +17,8 @@
     "angular-loading-bar/angular-loading-bar.d.ts": {
       "commit": "2e7a477ac2b6471055aa6e0e56b333e8f327d6b7"
     },
-    "node/node.d.ts": {
-      "commit": "c2939250ec2d1ecdc82fce62afb9354dd14909ea"
-    },
     "underscore/underscore.d.ts": {
       "commit": "7fffbd3e040a93c244777e3be04cd6223ac69301"
-    },
-    "mime/mime.d.ts": {
-      "commit": "c2939250ec2d1ecdc82fce62afb9354dd14909ea"
-    },
-    "express/express.d.ts": {
-      "commit": "c2939250ec2d1ecdc82fce62afb9354dd14909ea"
-    },
-    "serve-static/serve-static.d.ts": {
-      "commit": "c2939250ec2d1ecdc82fce62afb9354dd14909ea"
     }
   }
 }

@@ -16,7 +16,7 @@ var Blog = mongoose.Schema({
 
 Blog.methods.toVM = function(){
     var _this = this;
-    
+
     return {
         title: _this.title,
         author: _this.author,
