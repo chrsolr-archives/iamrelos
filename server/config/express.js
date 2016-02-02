@@ -18,8 +18,12 @@ module.exports = function () {
     app.use(express.static('public'));
 
     // routes
-    require('../server/routes/apis')(app, express);
-    require('../server/routes/routes')(app);
+    var api = express.Router();
+    app.use('/api', api);
+
+    require('../routes/misc')(api);
+    require('../routes/main')(app);
+    require('../routes/blog')(api);
 
     // return instance of express
     return app;

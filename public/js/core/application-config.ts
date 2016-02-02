@@ -20,7 +20,7 @@ import IRouteResolverServices = app.services.IRouteResolverServices;
             controllerAs: 'vm',
             resolve: {
                 initData: ['RouteResolverServices', (RouteResolverServices: IRouteResolverServices): any => {
-                    return RouteResolverServices.resolveHomeWord();
+                    return RouteResolverServices.resolveRandomQuote();
                 }]
             }
         }).when('/blog', {

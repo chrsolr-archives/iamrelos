@@ -13,29 +13,17 @@ var app;
             RouteResolverServices.prototype.resolveBlog = function (max) {
                 return this.$q.all([
                     this.CommonServices.getBlog(max)
-                ]).then(function (results) {
-                    return {
-                        data: results[0]
-                    };
-                });
+                ]).then(function (results) { return { data: results[0] }; });
             };
             RouteResolverServices.prototype.resolveBlogDetails = function (permalink) {
                 return this.$q.all([
                     this.CommonServices.getBlog(1, permalink)
-                ]).then(function (results) {
-                    return {
-                        data: results[0][0]
-                    };
-                });
+                ]).then(function (results) { return { data: results[0][0] }; });
             };
-            RouteResolverServices.prototype.resolveHomeWord = function () {
+            RouteResolverServices.prototype.resolveRandomQuote = function () {
                 return this.$q.all([
                     this.CommonServices.getRandomWord()
-                ]).then(function (results) {
-                    return {
-                        data: results[0]
-                    };
-                });
+                ]).then(function (results) { return { data: results[0] }; });
             };
             RouteResolverServices.$inject = ['$q', 'CommonServices'];
             return RouteResolverServices;

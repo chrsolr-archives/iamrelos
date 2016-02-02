@@ -11,7 +11,7 @@
             controllerAs: 'vm',
             resolve: {
                 initData: ['RouteResolverServices', function (RouteResolverServices) {
-                        return RouteResolverServices.resolveHomeWord();
+                        return RouteResolverServices.resolveRandomQuote();
                     }]
             }
         }).when('/blog', {
