@@ -1,8 +1,12 @@
 var request = require("request");
+var helper = require('../modules/helper');
 
-module.exports = function (api) {
+function MiscApis(api) {
 
     api.get('/quotes', function (req, res) {
+
+        if (!helper.isAjaxRequest(req))
+            return res.status(200).send();
 
         var url = 'http://quotes.stormconsultancy.co.uk/random.json';
 
@@ -23,3 +27,5 @@ module.exports = function (api) {
         });
     });
 };
+
+module.exports = MiscApis;

@@ -1,15 +1,19 @@
 var Blog = require('../models/blog');
+var helper = require('../modules/helper');
 
 /**
  * Get List of blog post.
  * Query String: {number}: limit => max amount to return.
  * Query String: {string}: permalink => permalink of specific blog post
  */
-module.exports = function (api) {
+function BlogApis(api) {
     api.get('/blogs', function (req, res) {
 
         var limit = req.query.limit || 10;
-        var query = {isActive: true, permalink: req.query.permalink};
+        var query = { isActive: true, permalink: req.query.permalink };
+
+        if (!helper.isAjaxRequest(req))
+            return res.status(200).send();
 
         if (typeof query.permalink === 'undefined' || query.permalink === 'undefined')
             delete query.permalink;
@@ -25,3 +29,5 @@ module.exports = function (api) {
         });
     });
 };
+
+module.exports = BlogApis;
