@@ -1,11 +1,25 @@
 {
-  "compilerOptions": {
-    "module": "commonjs",
-    "target": "es5",
-    "sourceMap": true,
-    "declaration": false
-  },
-  "exclude": [
-    "node_modules"
-  ]
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "removeComments": true,
+        "noImplicitAny": true,
+        "sourceMap": true,
+        "noImplicitReturns": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "noFallthroughCasesInSwitch": true,
+        "allowUnreachableCode": false,
+        "outFile": "./public/js/app.js"
+    },
+    "files": ["public/js/core/application.ts",
+        "public/js/services/common-services.ts",
+        "public/js/services/nagivation-services.ts",
+        "public/js/services/route-resolver-services.ts",
+        "public/js/core/application-config.ts",
+        "public/js/core/application-run.ts",
+        "public/js/directives/navbar/navigation-bar-directive.ts",
+        "public/js/controllers/blog-controller.ts",
+        "public/js/controllers/blog-details-controller.ts",
+        "public/js/controllers/home-controller.ts"
+    ]
 }

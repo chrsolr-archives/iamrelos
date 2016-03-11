@@ -26,8 +26,15 @@
     "request": "^2.69.0"
   },
   "devDependencies": {
-    "morgan": "^1.6.1",
-    "nodemon": "^1.8.1",
-    "uglify-js": "^2.6.1"
+    "gulp": "^3.9.0",
+    "gulp-cssnano": "^2.1.1",
+    "gulp-less": "^3.0.5",
+    "gulp-load-plugins": "^1.2.0",
+    "gulp-minify": "0.0.5",
+    "gulp-nodemon": "^2.0.6",
+    "gulp-rename": "^1.2.2",
+    "gulp-tsconfig": "^0.1.0",
+    "gulp-typescript": "^2.11.0",
+    "typescript": "^1.7.5"
   }
 }
